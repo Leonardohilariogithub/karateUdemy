@@ -1951,3 +1951,1489 @@
 17:30:30.750 [main] INFO  com.intuit.karate.Suite - backed up existing 'target\karate-reports' dir to: target\karate-reports_1656275430748
 17:44:49.197 [main] DEBUG com.intuit.karate.Suite - [config] classpath:karate-config.js
 17:44:49.215 [main] INFO  com.intuit.karate.Suite - backed up existing 'target\karate-reports' dir to: target\karate-reports_1656276289215
+15:29:11.899 [main] DEBUG com.intuit.karate.Suite - [config] classpath:karate-config.js
+15:29:11.911 [main] INFO  com.intuit.karate.Suite - backed up existing 'target\karate-reports' dir to: target\karate-reports_1656527351906
+15:29:11.942 [main] INFO  c.intuit.karate.core.FeatureRuntime - found scenario at line: 14 - ^Get 10 articles from the page$
+15:29:12.987 [main] INFO  com.intuit.karate - karate.env system property was: null 
+15:29:13.414 [main] DEBUG com.intuit.karate - request:
+1 > GET https://conduit.productionready.io/api/articles?offset=0&limit=10
+1 > Host: conduit.productionready.io
+1 > Connection: Keep-Alive
+1 > User-Agent: Apache-HttpClient/4.5.13 (Java/11.0.15)
+1 > Accept-Encoding: gzip,deflate
+
+
+15:29:14.008 [main] DEBUG com.intuit.karate - request:
+2 > GET https://conduit.productionready.io/api/articles?offset=0&limit=10
+2 > Host: api.realworld.io
+2 > Connection: Keep-Alive
+2 > User-Agent: Apache-HttpClient/4.5.13 (Java/11.0.15)
+2 > Accept-Encoding: gzip,deflate
+
+
+15:29:14.922 [main] DEBUG com.intuit.karate - response time in milliseconds: 895
+2 < 200
+2 < Date: Wed, 29 Jun 2022 18:29:14 GMT
+2 < Content-Type: application/json; charset=utf-8
+2 < Transfer-Encoding: chunked
+2 < Connection: keep-alive
+2 < X-Powered-By: Express
+2 < Access-Control-Allow-Origin: *
+2 < Etag: W/"6de-YHq56QZpbq1z0lnZ17imsZEjRDs"
+2 < Via: 1.1 vegur
+2 < CF-Cache-Status: DYNAMIC
+2 < Expect-CT: max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"
+2 < Report-To: {"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=z%2Btw5OIHcUXZ7m%2ByC9CMkKP2NLDqVSRCk7XKFgoNvrEjkO8dUikFqKKLJQ%2Fi1C1qiiqVrS7wKmkLO5vVDXygkzZMNFww6BQX1EtnWxJ6u9ycOpcVkY%2FgVBLErUWLpKT0Dtyx"}],"group":"cf-nel","max_age":604800}
+2 < NEL: {"success_fraction":0,"report_to":"cf-nel","max_age":604800}
+2 < Server: cloudflare
+2 < CF-RAY: 7230b9fb4f504d2f-GRU
+2 < alt-svc: h3=":443"; ma=86400, h3-29=":443"; ma=86400
+{"articles":[{"slug":"Create-a-new-implementation-1","title":"Create a new implementation","description":"join the community by creating a new implementation","body":"Share your knowledge and enpower the community by creating a new implementation","tagList":["implementations"],"createdAt":"2021-11-24T12:11:08.212Z","updatedAt":"2021-11-24T12:11:08.212Z","favorited":false,"favoritesCount":2934,"author":{"username":"Gerome","bio":null,"image":"https://api.realworld.io/images/demo-avatar.png","following":false}},{"slug":"Explore-implementations-1","title":"Explore implementations","description":"discover the implementations created by the RealWorld community","body":"Over 100 implementations have been created using various languages, libraries, and frameworks.\n\nExplore them on CodebaseShow.","tagList":["codebaseShow","implementations"],"createdAt":"2021-11-24T12:11:07.952Z","updatedAt":"2021-11-24T12:11:07.952Z","favorited":false,"favoritesCount":1704,"author":{"username":"Gerome","bio":null,"image":"https://api.realworld.io/images/demo-avatar.png","following":false}},{"slug":"Welcome-to-RealWorld-project-1","title":"Welcome to RealWorld project","description":"Exemplary fullstack Medium.com clone powered by React, Angular, Node, Django, and many more","body":"See how the exact same Medium.com clone (called Conduit) is built using different frontends and backends. Yes, you can mix and match them, because they all adhere to the same API spec","tagList":["welcome","introduction"],"createdAt":"2021-11-24T12:11:07.557Z","updatedAt":"2021-11-24T12:11:07.557Z","favorited":false,"favoritesCount":1199,"author":{"username":"Gerome","bio":null,"image":"https://api.realworld.io/images/demo-avatar.png","following":false}}],"articlesCount":3}
+
+15:29:14.966 [main] ERROR com.intuit.karate - src/test/java/conduitApp/feature/HomePage.feature:19
+And match response == { "articles": "#[10]", "articlesCount": 3}
+match failed: EQUALS
+  $ | not equal | match failed for name: 'articles' (MAP:MAP)
+  {"articles":[{"slug":"Create-a-new-implementation-1","title":"Create a new implementation","description":"join the community by creating a new implementation","body":"Share your knowledge and enpower the community by creating a new implementation","tagList":["implementations"],"createdAt":"2021-11-24T12:11:08.212Z","updatedAt":"2021-11-24T12:11:08.212Z","favorited":false,"favoritesCount":2934,"author":{"username":"Gerome","bio":null,"image":"https://api.realworld.io/images/demo-avatar.png","following":false}},{"slug":"Explore-implementations-1","title":"Explore implementations","description":"discover the implementations created by the RealWorld community","body":"Over 100 implementations have been created using various languages, libraries, and frameworks.\n\nExplore them on CodebaseShow.","tagList":["codebaseShow","implementations"],"createdAt":"2021-11-24T12:11:07.952Z","updatedAt":"2021-11-24T12:11:07.952Z","favorited":false,"favoritesCount":1704,"author":{"username":"Gerome","bio":null,"image":"https://api.realworld.io/images/demo-avatar.png","following":false}},{"slug":"Welcome-to-RealWorld-project-1","title":"Welcome to RealWorld project","description":"Exemplary fullstack Medium.com clone powered by React, Angular, Node, Django, and many more","body":"See how the exact same Medium.com clone (called Conduit) is built using different frontends and backends. Yes, you can mix and match them, because they all adhere to the same API spec","tagList":["welcome","introduction"],"createdAt":"2021-11-24T12:11:07.557Z","updatedAt":"2021-11-24T12:11:07.557Z","favorited":false,"favoritesCount":1199,"author":{"username":"Gerome","bio":null,"image":"https://api.realworld.io/images/demo-avatar.png","following":false}}],"articlesCount":3}
+  {"articles":"#[10]","articlesCount":3}
+
+    $.articles | actual array length is 3 (LIST:STRING)
+    [{"slug":"Create-a-new-implementation-1","title":"Create a new implementation","description":"join the community by creating a new implementation","body":"Share your knowledge and enpower the community by creating a new implementation","tagList":["implementations"],"createdAt":"2021-11-24T12:11:08.212Z","updatedAt":"2021-11-24T12:11:08.212Z","favorited":false,"favoritesCount":2934,"author":{"username":"Gerome","bio":null,"image":"https://api.realworld.io/images/demo-avatar.png","following":false}},{"slug":"Explore-implementations-1","title":"Explore implementations","description":"discover the implementations created by the RealWorld community","body":"Over 100 implementations have been created using various languages, libraries, and frameworks.\n\nExplore them on CodebaseShow.","tagList":["codebaseShow","implementations"],"createdAt":"2021-11-24T12:11:07.952Z","updatedAt":"2021-11-24T12:11:07.952Z","favorited":false,"favoritesCount":1704,"author":{"username":"Gerome","bio":null,"image":"https://api.realworld.io/images/demo-avatar.png","following":false}},{"slug":"Welcome-to-RealWorld-project-1","title":"Welcome to RealWorld project","description":"Exemplary fullstack Medium.com clone powered by React, Angular, Node, Django, and many more","body":"See how the exact same Medium.com clone (called Conduit) is built using different frontends and backends. Yes, you can mix and match them, because they all adhere to the same API spec","tagList":["welcome","introduction"],"createdAt":"2021-11-24T12:11:07.557Z","updatedAt":"2021-11-24T12:11:07.557Z","favorited":false,"favoritesCount":1199,"author":{"username":"Gerome","bio":null,"image":"https://api.realworld.io/images/demo-avatar.png","following":false}}]
+    '#[10]'
+
+src/test/java/conduitApp/feature/HomePage.feature:19
+15:29:15.666 [main] INFO  com.intuit.karate.Suite - <<fail>> feature 1 of 1 (0 remaining) src/test/java/conduitApp/feature/HomePage.feature
+15:29:40.002 [main] DEBUG com.intuit.karate.Suite - [config] classpath:karate-config.js
+15:29:40.008 [main] INFO  com.intuit.karate.Suite - backed up existing 'target\karate-reports' dir to: target\karate-reports_1656527380006
+15:29:40.033 [main] INFO  c.intuit.karate.core.FeatureRuntime - found scenario at line: 14 - ^Get 10 articles from the page$
+15:29:40.919 [main] INFO  com.intuit.karate - karate.env system property was: null 
+15:29:41.396 [main] DEBUG com.intuit.karate - request:
+1 > GET https://conduit.productionready.io/api/articles?offset=0&limit=10
+1 > Host: conduit.productionready.io
+1 > Connection: Keep-Alive
+1 > User-Agent: Apache-HttpClient/4.5.13 (Java/11.0.15)
+1 > Accept-Encoding: gzip,deflate
+
+
+15:29:41.984 [main] DEBUG com.intuit.karate - request:
+2 > GET https://conduit.productionready.io/api/articles?offset=0&limit=10
+2 > Host: api.realworld.io
+2 > Connection: Keep-Alive
+2 > User-Agent: Apache-HttpClient/4.5.13 (Java/11.0.15)
+2 > Accept-Encoding: gzip,deflate
+
+
+15:29:42.732 [main] DEBUG com.intuit.karate - response time in milliseconds: 746
+2 < 200
+2 < Date: Wed, 29 Jun 2022 18:29:42 GMT
+2 < Content-Type: application/json; charset=utf-8
+2 < Transfer-Encoding: chunked
+2 < Connection: keep-alive
+2 < X-Powered-By: Express
+2 < Access-Control-Allow-Origin: *
+2 < Etag: W/"6de-YHq56QZpbq1z0lnZ17imsZEjRDs"
+2 < Via: 1.1 vegur
+2 < CF-Cache-Status: DYNAMIC
+2 < Expect-CT: max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"
+2 < Report-To: {"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=htfeewrNELqw6B5L%2FZAUKj7hvlC7EKlxXUcBuiGO5Su6mlYgLjMgQm0Ze2u6tNW7IzMq0cPYIeun7SBoM8mELDmsxQfO3imkJBJvY6j70i9MLMEshfyZFFgjOAUESR1GV69Z"}],"group":"cf-nel","max_age":604800}
+2 < NEL: {"success_fraction":0,"report_to":"cf-nel","max_age":604800}
+2 < Server: cloudflare
+2 < CF-RAY: 7230baa9bae5a51a-GRU
+2 < alt-svc: h3=":443"; ma=86400, h3-29=":443"; ma=86400
+{"articles":[{"slug":"Create-a-new-implementation-1","title":"Create a new implementation","description":"join the community by creating a new implementation","body":"Share your knowledge and enpower the community by creating a new implementation","tagList":["implementations"],"createdAt":"2021-11-24T12:11:08.212Z","updatedAt":"2021-11-24T12:11:08.212Z","favorited":false,"favoritesCount":2934,"author":{"username":"Gerome","bio":null,"image":"https://api.realworld.io/images/demo-avatar.png","following":false}},{"slug":"Explore-implementations-1","title":"Explore implementations","description":"discover the implementations created by the RealWorld community","body":"Over 100 implementations have been created using various languages, libraries, and frameworks.\n\nExplore them on CodebaseShow.","tagList":["codebaseShow","implementations"],"createdAt":"2021-11-24T12:11:07.952Z","updatedAt":"2021-11-24T12:11:07.952Z","favorited":false,"favoritesCount":1704,"author":{"username":"Gerome","bio":null,"image":"https://api.realworld.io/images/demo-avatar.png","following":false}},{"slug":"Welcome-to-RealWorld-project-1","title":"Welcome to RealWorld project","description":"Exemplary fullstack Medium.com clone powered by React, Angular, Node, Django, and many more","body":"See how the exact same Medium.com clone (called Conduit) is built using different frontends and backends. Yes, you can mix and match them, because they all adhere to the same API spec","tagList":["welcome","introduction"],"createdAt":"2021-11-24T12:11:07.557Z","updatedAt":"2021-11-24T12:11:07.557Z","favorited":false,"favoritesCount":1199,"author":{"username":"Gerome","bio":null,"image":"https://api.realworld.io/images/demo-avatar.png","following":false}}],"articlesCount":3}
+
+15:29:42.758 [main] ERROR com.intuit.karate - src/test/java/conduitApp/feature/HomePage.feature:19
+And match response == { "articles": "#[10]", "articlesCount": 3}
+match failed: EQUALS
+  $ | not equal | match failed for name: 'articles' (MAP:MAP)
+  {"articles":[{"slug":"Create-a-new-implementation-1","title":"Create a new implementation","description":"join the community by creating a new implementation","body":"Share your knowledge and enpower the community by creating a new implementation","tagList":["implementations"],"createdAt":"2021-11-24T12:11:08.212Z","updatedAt":"2021-11-24T12:11:08.212Z","favorited":false,"favoritesCount":2934,"author":{"username":"Gerome","bio":null,"image":"https://api.realworld.io/images/demo-avatar.png","following":false}},{"slug":"Explore-implementations-1","title":"Explore implementations","description":"discover the implementations created by the RealWorld community","body":"Over 100 implementations have been created using various languages, libraries, and frameworks.\n\nExplore them on CodebaseShow.","tagList":["codebaseShow","implementations"],"createdAt":"2021-11-24T12:11:07.952Z","updatedAt":"2021-11-24T12:11:07.952Z","favorited":false,"favoritesCount":1704,"author":{"username":"Gerome","bio":null,"image":"https://api.realworld.io/images/demo-avatar.png","following":false}},{"slug":"Welcome-to-RealWorld-project-1","title":"Welcome to RealWorld project","description":"Exemplary fullstack Medium.com clone powered by React, Angular, Node, Django, and many more","body":"See how the exact same Medium.com clone (called Conduit) is built using different frontends and backends. Yes, you can mix and match them, because they all adhere to the same API spec","tagList":["welcome","introduction"],"createdAt":"2021-11-24T12:11:07.557Z","updatedAt":"2021-11-24T12:11:07.557Z","favorited":false,"favoritesCount":1199,"author":{"username":"Gerome","bio":null,"image":"https://api.realworld.io/images/demo-avatar.png","following":false}}],"articlesCount":3}
+  {"articles":"#[10]","articlesCount":3}
+
+    $.articles | actual array length is 3 (LIST:STRING)
+    [{"slug":"Create-a-new-implementation-1","title":"Create a new implementation","description":"join the community by creating a new implementation","body":"Share your knowledge and enpower the community by creating a new implementation","tagList":["implementations"],"createdAt":"2021-11-24T12:11:08.212Z","updatedAt":"2021-11-24T12:11:08.212Z","favorited":false,"favoritesCount":2934,"author":{"username":"Gerome","bio":null,"image":"https://api.realworld.io/images/demo-avatar.png","following":false}},{"slug":"Explore-implementations-1","title":"Explore implementations","description":"discover the implementations created by the RealWorld community","body":"Over 100 implementations have been created using various languages, libraries, and frameworks.\n\nExplore them on CodebaseShow.","tagList":["codebaseShow","implementations"],"createdAt":"2021-11-24T12:11:07.952Z","updatedAt":"2021-11-24T12:11:07.952Z","favorited":false,"favoritesCount":1704,"author":{"username":"Gerome","bio":null,"image":"https://api.realworld.io/images/demo-avatar.png","following":false}},{"slug":"Welcome-to-RealWorld-project-1","title":"Welcome to RealWorld project","description":"Exemplary fullstack Medium.com clone powered by React, Angular, Node, Django, and many more","body":"See how the exact same Medium.com clone (called Conduit) is built using different frontends and backends. Yes, you can mix and match them, because they all adhere to the same API spec","tagList":["welcome","introduction"],"createdAt":"2021-11-24T12:11:07.557Z","updatedAt":"2021-11-24T12:11:07.557Z","favorited":false,"favoritesCount":1199,"author":{"username":"Gerome","bio":null,"image":"https://api.realworld.io/images/demo-avatar.png","following":false}}]
+    '#[10]'
+
+src/test/java/conduitApp/feature/HomePage.feature:19
+15:29:43.448 [main] INFO  com.intuit.karate.Suite - <<fail>> feature 1 of 1 (0 remaining) src/test/java/conduitApp/feature/HomePage.feature
+15:30:31.465 [main] DEBUG com.intuit.karate.Suite - [config] classpath:karate-config.js
+15:30:31.478 [main] INFO  com.intuit.karate.Suite - backed up existing 'target\karate-reports' dir to: target\karate-reports_1656527431475
+15:30:31.565 [main] INFO  c.intuit.karate.core.FeatureRuntime - found scenario at line: 14 - ^Get 10 articles from the page$
+15:30:33.090 [main] INFO  com.intuit.karate - karate.env system property was: null 
+15:30:33.610 [main] DEBUG com.intuit.karate - request:
+1 > GET https://conduit.productionready.io/api/articles?offset=0&limit=10
+1 > Host: conduit.productionready.io
+1 > Connection: Keep-Alive
+1 > User-Agent: Apache-HttpClient/4.5.13 (Java/11.0.15)
+1 > Accept-Encoding: gzip,deflate
+
+
+15:30:34.018 [main] DEBUG com.intuit.karate - request:
+2 > GET https://conduit.productionready.io/api/articles?offset=0&limit=10
+2 > Host: api.realworld.io
+2 > Connection: Keep-Alive
+2 > User-Agent: Apache-HttpClient/4.5.13 (Java/11.0.15)
+2 > Accept-Encoding: gzip,deflate
+
+
+15:30:34.803 [main] DEBUG com.intuit.karate - response time in milliseconds: 782
+2 < 200
+2 < Date: Wed, 29 Jun 2022 18:30:34 GMT
+2 < Content-Type: application/json; charset=utf-8
+2 < Transfer-Encoding: chunked
+2 < Connection: keep-alive
+2 < X-Powered-By: Express
+2 < Access-Control-Allow-Origin: *
+2 < Etag: W/"6de-YHq56QZpbq1z0lnZ17imsZEjRDs"
+2 < Via: 1.1 vegur
+2 < CF-Cache-Status: DYNAMIC
+2 < Expect-CT: max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"
+2 < Report-To: {"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=66tdcig8k9i%2FqFiMXtXNCNWcfbzzqdo3nodYYLXaBOSCDMxYGhSLAb5A10Kx%2BycpZfsE8VSwNqt4fKIY43g%2F0S%2FfWUyjD6hglM0WrmAF%2BeCi81A0QyHMqJHpS71kxtl6nJMA"}],"group":"cf-nel","max_age":604800}
+2 < NEL: {"success_fraction":0,"report_to":"cf-nel","max_age":604800}
+2 < Server: cloudflare
+2 < CF-RAY: 7230bbeefbf3a670-GRU
+2 < alt-svc: h3=":443"; ma=86400, h3-29=":443"; ma=86400
+{"articles":[{"slug":"Create-a-new-implementation-1","title":"Create a new implementation","description":"join the community by creating a new implementation","body":"Share your knowledge and enpower the community by creating a new implementation","tagList":["implementations"],"createdAt":"2021-11-24T12:11:08.212Z","updatedAt":"2021-11-24T12:11:08.212Z","favorited":false,"favoritesCount":2934,"author":{"username":"Gerome","bio":null,"image":"https://api.realworld.io/images/demo-avatar.png","following":false}},{"slug":"Explore-implementations-1","title":"Explore implementations","description":"discover the implementations created by the RealWorld community","body":"Over 100 implementations have been created using various languages, libraries, and frameworks.\n\nExplore them on CodebaseShow.","tagList":["codebaseShow","implementations"],"createdAt":"2021-11-24T12:11:07.952Z","updatedAt":"2021-11-24T12:11:07.952Z","favorited":false,"favoritesCount":1704,"author":{"username":"Gerome","bio":null,"image":"https://api.realworld.io/images/demo-avatar.png","following":false}},{"slug":"Welcome-to-RealWorld-project-1","title":"Welcome to RealWorld project","description":"Exemplary fullstack Medium.com clone powered by React, Angular, Node, Django, and many more","body":"See how the exact same Medium.com clone (called Conduit) is built using different frontends and backends. Yes, you can mix and match them, because they all adhere to the same API spec","tagList":["welcome","introduction"],"createdAt":"2021-11-24T12:11:07.557Z","updatedAt":"2021-11-24T12:11:07.557Z","favorited":false,"favoritesCount":1199,"author":{"username":"Gerome","bio":null,"image":"https://api.realworld.io/images/demo-avatar.png","following":false}}],"articlesCount":3}
+
+15:30:34.822 [main] ERROR com.intuit.karate - src/test/java/conduitApp/feature/HomePage.feature:19
+And match response == { "articles": "#[10]", "articlesCount": 3}
+match failed: EQUALS
+  $ | not equal | match failed for name: 'articles' (MAP:MAP)
+  {"articles":[{"slug":"Create-a-new-implementation-1","title":"Create a new implementation","description":"join the community by creating a new implementation","body":"Share your knowledge and enpower the community by creating a new implementation","tagList":["implementations"],"createdAt":"2021-11-24T12:11:08.212Z","updatedAt":"2021-11-24T12:11:08.212Z","favorited":false,"favoritesCount":2934,"author":{"username":"Gerome","bio":null,"image":"https://api.realworld.io/images/demo-avatar.png","following":false}},{"slug":"Explore-implementations-1","title":"Explore implementations","description":"discover the implementations created by the RealWorld community","body":"Over 100 implementations have been created using various languages, libraries, and frameworks.\n\nExplore them on CodebaseShow.","tagList":["codebaseShow","implementations"],"createdAt":"2021-11-24T12:11:07.952Z","updatedAt":"2021-11-24T12:11:07.952Z","favorited":false,"favoritesCount":1704,"author":{"username":"Gerome","bio":null,"image":"https://api.realworld.io/images/demo-avatar.png","following":false}},{"slug":"Welcome-to-RealWorld-project-1","title":"Welcome to RealWorld project","description":"Exemplary fullstack Medium.com clone powered by React, Angular, Node, Django, and many more","body":"See how the exact same Medium.com clone (called Conduit) is built using different frontends and backends. Yes, you can mix and match them, because they all adhere to the same API spec","tagList":["welcome","introduction"],"createdAt":"2021-11-24T12:11:07.557Z","updatedAt":"2021-11-24T12:11:07.557Z","favorited":false,"favoritesCount":1199,"author":{"username":"Gerome","bio":null,"image":"https://api.realworld.io/images/demo-avatar.png","following":false}}],"articlesCount":3}
+  {"articles":"#[10]","articlesCount":3}
+
+    $.articles | actual array length is 3 (LIST:STRING)
+    [{"slug":"Create-a-new-implementation-1","title":"Create a new implementation","description":"join the community by creating a new implementation","body":"Share your knowledge and enpower the community by creating a new implementation","tagList":["implementations"],"createdAt":"2021-11-24T12:11:08.212Z","updatedAt":"2021-11-24T12:11:08.212Z","favorited":false,"favoritesCount":2934,"author":{"username":"Gerome","bio":null,"image":"https://api.realworld.io/images/demo-avatar.png","following":false}},{"slug":"Explore-implementations-1","title":"Explore implementations","description":"discover the implementations created by the RealWorld community","body":"Over 100 implementations have been created using various languages, libraries, and frameworks.\n\nExplore them on CodebaseShow.","tagList":["codebaseShow","implementations"],"createdAt":"2021-11-24T12:11:07.952Z","updatedAt":"2021-11-24T12:11:07.952Z","favorited":false,"favoritesCount":1704,"author":{"username":"Gerome","bio":null,"image":"https://api.realworld.io/images/demo-avatar.png","following":false}},{"slug":"Welcome-to-RealWorld-project-1","title":"Welcome to RealWorld project","description":"Exemplary fullstack Medium.com clone powered by React, Angular, Node, Django, and many more","body":"See how the exact same Medium.com clone (called Conduit) is built using different frontends and backends. Yes, you can mix and match them, because they all adhere to the same API spec","tagList":["welcome","introduction"],"createdAt":"2021-11-24T12:11:07.557Z","updatedAt":"2021-11-24T12:11:07.557Z","favorited":false,"favoritesCount":1199,"author":{"username":"Gerome","bio":null,"image":"https://api.realworld.io/images/demo-avatar.png","following":false}}]
+    '#[10]'
+
+src/test/java/conduitApp/feature/HomePage.feature:19
+15:30:35.491 [main] INFO  com.intuit.karate.Suite - <<fail>> feature 1 of 1 (0 remaining) src/test/java/conduitApp/feature/HomePage.feature
+15:31:09.878 [main] DEBUG com.intuit.karate.Suite - [config] classpath:karate-config.js
+15:31:09.885 [main] INFO  com.intuit.karate.Suite - backed up existing 'target\karate-reports' dir to: target\karate-reports_1656527469882
+15:31:09.914 [main] INFO  c.intuit.karate.core.FeatureRuntime - found scenario at line: 14 - ^Get 10 articles from the page$
+15:31:10.783 [main] INFO  com.intuit.karate - karate.env system property was: null 
+15:31:11.253 [main] DEBUG com.intuit.karate - request:
+1 > GET https://conduit.productionready.io/api/articles?offset=0&limit=10
+1 > Host: conduit.productionready.io
+1 > Connection: Keep-Alive
+1 > User-Agent: Apache-HttpClient/4.5.13 (Java/11.0.15)
+1 > Accept-Encoding: gzip,deflate
+
+
+15:31:11.748 [main] DEBUG com.intuit.karate - request:
+2 > GET https://conduit.productionready.io/api/articles?offset=0&limit=10
+2 > Host: api.realworld.io
+2 > Connection: Keep-Alive
+2 > User-Agent: Apache-HttpClient/4.5.13 (Java/11.0.15)
+2 > Accept-Encoding: gzip,deflate
+
+
+15:31:12.523 [main] DEBUG com.intuit.karate - response time in milliseconds: 773
+2 < 200
+2 < Date: Wed, 29 Jun 2022 18:31:12 GMT
+2 < Content-Type: application/json; charset=utf-8
+2 < Transfer-Encoding: chunked
+2 < Connection: keep-alive
+2 < X-Powered-By: Express
+2 < Access-Control-Allow-Origin: *
+2 < Etag: W/"6de-YHq56QZpbq1z0lnZ17imsZEjRDs"
+2 < Via: 1.1 vegur
+2 < CF-Cache-Status: DYNAMIC
+2 < Expect-CT: max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"
+2 < Report-To: {"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=3HQy0dkpYUe%2BTf9Kv%2B7VuEzBz%2BnmeLJ6K4c1b%2ByViZQlZY0q%2BbmF7vpTxMYq6buz9x5y7qA7vJG5LB1V114NWxcOrcozoni2T4UZgSmqTfCmQBsdep4%2BiEXCWGZV0032zWDO"}],"group":"cf-nel","max_age":604800}
+2 < NEL: {"success_fraction":0,"report_to":"cf-nel","max_age":604800}
+2 < Server: cloudflare
+2 < CF-RAY: 7230bcdab8eea4d8-GRU
+2 < alt-svc: h3=":443"; ma=86400, h3-29=":443"; ma=86400
+{"articles":[{"slug":"Create-a-new-implementation-1","title":"Create a new implementation","description":"join the community by creating a new implementation","body":"Share your knowledge and enpower the community by creating a new implementation","tagList":["implementations"],"createdAt":"2021-11-24T12:11:08.212Z","updatedAt":"2021-11-24T12:11:08.212Z","favorited":false,"favoritesCount":2934,"author":{"username":"Gerome","bio":null,"image":"https://api.realworld.io/images/demo-avatar.png","following":false}},{"slug":"Explore-implementations-1","title":"Explore implementations","description":"discover the implementations created by the RealWorld community","body":"Over 100 implementations have been created using various languages, libraries, and frameworks.\n\nExplore them on CodebaseShow.","tagList":["codebaseShow","implementations"],"createdAt":"2021-11-24T12:11:07.952Z","updatedAt":"2021-11-24T12:11:07.952Z","favorited":false,"favoritesCount":1704,"author":{"username":"Gerome","bio":null,"image":"https://api.realworld.io/images/demo-avatar.png","following":false}},{"slug":"Welcome-to-RealWorld-project-1","title":"Welcome to RealWorld project","description":"Exemplary fullstack Medium.com clone powered by React, Angular, Node, Django, and many more","body":"See how the exact same Medium.com clone (called Conduit) is built using different frontends and backends. Yes, you can mix and match them, because they all adhere to the same API spec","tagList":["welcome","introduction"],"createdAt":"2021-11-24T12:11:07.557Z","updatedAt":"2021-11-24T12:11:07.557Z","favorited":false,"favoritesCount":1199,"author":{"username":"Gerome","bio":null,"image":"https://api.realworld.io/images/demo-avatar.png","following":false}}],"articlesCount":3}
+
+15:31:13.252 [main] INFO  com.intuit.karate.Suite - <<pass>> feature 1 of 1 (0 remaining) src/test/java/conduitApp/feature/HomePage.feature
+15:31:24.424 [main] DEBUG com.intuit.karate.Suite - [config] classpath:karate-config.js
+15:31:24.431 [main] INFO  com.intuit.karate.Suite - backed up existing 'target\karate-reports' dir to: target\karate-reports_1656527484429
+15:31:24.464 [main] INFO  c.intuit.karate.core.FeatureRuntime - found scenario at line: 14 - ^Get 10 articles from the page$
+15:31:25.517 [main] INFO  com.intuit.karate - karate.env system property was: null 
+15:31:26.032 [main] DEBUG com.intuit.karate - request:
+1 > GET https://conduit.productionready.io/api/articles?offset=0&limit=10
+1 > Host: conduit.productionready.io
+1 > Connection: Keep-Alive
+1 > User-Agent: Apache-HttpClient/4.5.13 (Java/11.0.15)
+1 > Accept-Encoding: gzip,deflate
+
+
+15:31:26.469 [main] DEBUG com.intuit.karate - request:
+2 > GET https://conduit.productionready.io/api/articles?offset=0&limit=10
+2 > Host: api.realworld.io
+2 > Connection: Keep-Alive
+2 > User-Agent: Apache-HttpClient/4.5.13 (Java/11.0.15)
+2 > Accept-Encoding: gzip,deflate
+
+
+15:31:27.294 [main] DEBUG com.intuit.karate - response time in milliseconds: 751
+2 < 200
+2 < Date: Wed, 29 Jun 2022 18:31:27 GMT
+2 < Content-Type: application/json; charset=utf-8
+2 < Transfer-Encoding: chunked
+2 < Connection: keep-alive
+2 < X-Powered-By: Express
+2 < Access-Control-Allow-Origin: *
+2 < Etag: W/"6de-YHq56QZpbq1z0lnZ17imsZEjRDs"
+2 < Via: 1.1 vegur
+2 < CF-Cache-Status: DYNAMIC
+2 < Expect-CT: max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"
+2 < Report-To: {"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=xVsHouEmvITCTSv8H%2FjkHiTTnrWSu8qJv7uXbTiKzhMEzLahScSrsBY0eBNdNP2oD3pKS2eXoWKJ51Q%2FXs1q5OEs8%2B7aBNlJhWabxc6JXWi7oVTcCfzillBulHvxtH8amyU7"}],"group":"cf-nel","max_age":604800}
+2 < NEL: {"success_fraction":0,"report_to":"cf-nel","max_age":604800}
+2 < Server: cloudflare
+2 < CF-RAY: 7230bd36ab09a597-GRU
+2 < alt-svc: h3=":443"; ma=86400, h3-29=":443"; ma=86400
+{"articles":[{"slug":"Create-a-new-implementation-1","title":"Create a new implementation","description":"join the community by creating a new implementation","body":"Share your knowledge and enpower the community by creating a new implementation","tagList":["implementations"],"createdAt":"2021-11-24T12:11:08.212Z","updatedAt":"2021-11-24T12:11:08.212Z","favorited":false,"favoritesCount":2934,"author":{"username":"Gerome","bio":null,"image":"https://api.realworld.io/images/demo-avatar.png","following":false}},{"slug":"Explore-implementations-1","title":"Explore implementations","description":"discover the implementations created by the RealWorld community","body":"Over 100 implementations have been created using various languages, libraries, and frameworks.\n\nExplore them on CodebaseShow.","tagList":["codebaseShow","implementations"],"createdAt":"2021-11-24T12:11:07.952Z","updatedAt":"2021-11-24T12:11:07.952Z","favorited":false,"favoritesCount":1704,"author":{"username":"Gerome","bio":null,"image":"https://api.realworld.io/images/demo-avatar.png","following":false}},{"slug":"Welcome-to-RealWorld-project-1","title":"Welcome to RealWorld project","description":"Exemplary fullstack Medium.com clone powered by React, Angular, Node, Django, and many more","body":"See how the exact same Medium.com clone (called Conduit) is built using different frontends and backends. Yes, you can mix and match them, because they all adhere to the same API spec","tagList":["welcome","introduction"],"createdAt":"2021-11-24T12:11:07.557Z","updatedAt":"2021-11-24T12:11:07.557Z","favorited":false,"favoritesCount":1199,"author":{"username":"Gerome","bio":null,"image":"https://api.realworld.io/images/demo-avatar.png","following":false}}],"articlesCount":3}
+
+15:31:28.118 [main] INFO  com.intuit.karate.Suite - <<pass>> feature 1 of 1 (0 remaining) src/test/java/conduitApp/feature/HomePage.feature
+15:45:04.896 [main] DEBUG com.intuit.karate.Suite - [config] classpath:karate-config.js
+15:45:08.851 [main] INFO  com.intuit.karate - karate.env system property was: null 
+15:45:09.505 [main] DEBUG com.intuit.karate - request:
+1 > GET https://conduit.productionready.io/api/tags
+1 > Host: conduit.productionready.io
+1 > Connection: Keep-Alive
+1 > User-Agent: Apache-HttpClient/4.5.13 (Java/11.0.15)
+1 > Accept-Encoding: gzip,deflate
+
+
+15:45:10.648 [main] DEBUG com.intuit.karate - request:
+2 > GET https://conduit.productionready.io/api/tags
+2 > Host: api.realworld.io
+2 > Connection: Keep-Alive
+2 > User-Agent: Apache-HttpClient/4.5.13 (Java/11.0.15)
+2 > Accept-Encoding: gzip,deflate
+
+
+15:45:11.391 [main] DEBUG com.intuit.karate - response time in milliseconds: 740
+2 < 200
+2 < Date: Wed, 29 Jun 2022 18:45:11 GMT
+2 < Content-Type: application/json; charset=utf-8
+2 < Transfer-Encoding: chunked
+2 < Connection: keep-alive
+2 < X-Powered-By: Express
+2 < Access-Control-Allow-Origin: *
+2 < Etag: W/"44-qib2l7lCGku68eG2tPFSJV9lwX4"
+2 < Via: 1.1 vegur
+2 < CF-Cache-Status: DYNAMIC
+2 < Expect-CT: max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"
+2 < Report-To: {"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=Jvycb%2F3crwOVs9Ww%2BUbnEsjBi6r4DypzriRLushz4lVAh2E03GJxLBEdOzEfE%2B%2FKwAULlHlScPY3l%2FBA4zZTIhq%2FpgLZJS088A9EyVeJfv1cQpDDcAfQfW8bTXyKOeuP71XP"}],"group":"cf-nel","max_age":604800}
+2 < NEL: {"success_fraction":0,"report_to":"cf-nel","max_age":604800}
+2 < Server: cloudflare
+2 < CF-RAY: 7230d1574fbd51f3-GRU
+2 < alt-svc: h3=":443"; ma=86400, h3-29=":443"; ma=86400
+{"tags":["implementations","welcome","introduction","codebaseShow"]}
+
+15:45:51.351 [main] DEBUG com.intuit.karate.Suite - [config] classpath:karate-config.js
+15:45:52.495 [main] INFO  com.intuit.karate - karate.env system property was: null 
+15:45:52.959 [main] DEBUG com.intuit.karate - request:
+1 > GET https://conduit.productionready.io/api/tags
+1 > Host: conduit.productionready.io
+1 > Connection: Keep-Alive
+1 > User-Agent: Apache-HttpClient/4.5.13 (Java/11.0.15)
+1 > Accept-Encoding: gzip,deflate
+
+
+15:45:54.418 [main] DEBUG com.intuit.karate - request:
+2 > GET https://conduit.productionready.io/api/tags
+2 > Host: api.realworld.io
+2 > Connection: Keep-Alive
+2 > User-Agent: Apache-HttpClient/4.5.13 (Java/11.0.15)
+2 > Accept-Encoding: gzip,deflate
+
+
+15:45:54.986 [main] DEBUG com.intuit.karate - response time in milliseconds: 559
+2 < 200
+2 < Date: Wed, 29 Jun 2022 18:45:54 GMT
+2 < Content-Type: application/json; charset=utf-8
+2 < Transfer-Encoding: chunked
+2 < Connection: keep-alive
+2 < X-Powered-By: Express
+2 < Access-Control-Allow-Origin: *
+2 < Etag: W/"44-qib2l7lCGku68eG2tPFSJV9lwX4"
+2 < Via: 1.1 vegur
+2 < CF-Cache-Status: DYNAMIC
+2 < Expect-CT: max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"
+2 < Report-To: {"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=UH30ZlqnOhurPsVQl0d%2Fw%2FXvLhwdoCx44EFBb1vyj0loXXhNGpXapRuYAxeo7FBmc1htJSzlK7QC3g3FjnYItfGf7mkYQmg9EmmXkSszSqgQAiTmkbuH7TRbb%2FcZmI0MB8A%2F"}],"group":"cf-nel","max_age":604800}
+2 < NEL: {"success_fraction":0,"report_to":"cf-nel","max_age":604800}
+2 < Server: cloudflare
+2 < CF-RAY: 7230d267c89aa4e4-GRU
+2 < alt-svc: h3=":443"; ma=86400, h3-29=":443"; ma=86400
+{"tags":["implementations","welcome","introduction","codebaseShow"]}
+
+15:45:55.060 [main] INFO  com.intuit.karate - karate.env system property was: null 
+15:45:55.075 [main] DEBUG com.intuit.karate - request:
+1 > GET https://conduit.productionready.io/api/articles?offset=0&limit=10
+1 > Host: conduit.productionready.io
+1 > Connection: Keep-Alive
+1 > User-Agent: Apache-HttpClient/4.5.13 (Java/11.0.15)
+1 > Accept-Encoding: gzip,deflate
+
+
+15:45:55.284 [main] DEBUG com.intuit.karate - request:
+2 > GET https://conduit.productionready.io/api/articles?offset=0&limit=10
+2 > Host: api.realworld.io
+2 > Connection: Keep-Alive
+2 > User-Agent: Apache-HttpClient/4.5.13 (Java/11.0.15)
+2 > Accept-Encoding: gzip,deflate
+
+
+15:45:56.038 [main] DEBUG com.intuit.karate - response time in milliseconds: 754
+2 < 200
+2 < Date: Wed, 29 Jun 2022 18:45:55 GMT
+2 < Content-Type: application/json; charset=utf-8
+2 < Transfer-Encoding: chunked
+2 < Connection: keep-alive
+2 < X-Powered-By: Express
+2 < Access-Control-Allow-Origin: *
+2 < Etag: W/"6de-YHq56QZpbq1z0lnZ17imsZEjRDs"
+2 < Via: 1.1 vegur
+2 < CF-Cache-Status: DYNAMIC
+2 < Expect-CT: max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"
+2 < Report-To: {"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=tKlntGprPRQn%2BsGWfozO8zuC6mpPyCKGW9G4NdKnQ1oMJfiCWyqNCbN1uzyH%2FCnH68edfsG1VUy%2B%2BHKBLuRqSj0IgaFncacvBKh%2FrHFjbpqFwWm8hdDaZhZ%2BmDp%2BuMx0K22c"}],"group":"cf-nel","max_age":604800}
+2 < NEL: {"success_fraction":0,"report_to":"cf-nel","max_age":604800}
+2 < Server: cloudflare
+2 < CF-RAY: 7230d26d39fe6b26-GRU
+2 < alt-svc: h3=":443"; ma=86400, h3-29=":443"; ma=86400
+{"articles":[{"slug":"Create-a-new-implementation-1","title":"Create a new implementation","description":"join the community by creating a new implementation","body":"Share your knowledge and enpower the community by creating a new implementation","tagList":["implementations"],"createdAt":"2021-11-24T12:11:08.212Z","updatedAt":"2021-11-24T12:11:08.212Z","favorited":false,"favoritesCount":2934,"author":{"username":"Gerome","bio":null,"image":"https://api.realworld.io/images/demo-avatar.png","following":false}},{"slug":"Explore-implementations-1","title":"Explore implementations","description":"discover the implementations created by the RealWorld community","body":"Over 100 implementations have been created using various languages, libraries, and frameworks.\n\nExplore them on CodebaseShow.","tagList":["codebaseShow","implementations"],"createdAt":"2021-11-24T12:11:07.952Z","updatedAt":"2021-11-24T12:11:07.952Z","favorited":false,"favoritesCount":1704,"author":{"username":"Gerome","bio":null,"image":"https://api.realworld.io/images/demo-avatar.png","following":false}},{"slug":"Welcome-to-RealWorld-project-1","title":"Welcome to RealWorld project","description":"Exemplary fullstack Medium.com clone powered by React, Angular, Node, Django, and many more","body":"See how the exact same Medium.com clone (called Conduit) is built using different frontends and backends. Yes, you can mix and match them, because they all adhere to the same API spec","tagList":["welcome","introduction"],"createdAt":"2021-11-24T12:11:07.557Z","updatedAt":"2021-11-24T12:11:07.557Z","favorited":false,"favoritesCount":1199,"author":{"username":"Gerome","bio":null,"image":"https://api.realworld.io/images/demo-avatar.png","following":false}}],"articlesCount":3}
+
+15:55:53.142 [main] DEBUG com.intuit.karate.Suite - [config] classpath:karate-config.js
+15:55:53.155 [main] INFO  com.intuit.karate.Suite - backed up existing 'target\karate-reports' dir to: target\karate-reports_1656528953147
+15:55:54.538 [main] INFO  com.intuit.karate - karate.env system property was: null 
+15:55:55.080 [main] DEBUG com.intuit.karate - request:
+1 > GET https://conduit.productionready.io/api/tags
+1 > Host: conduit.productionready.io
+1 > Connection: Keep-Alive
+1 > User-Agent: Apache-HttpClient/4.5.13 (Java/11.0.15)
+1 > Accept-Encoding: gzip,deflate
+
+
+15:55:55.717 [main] DEBUG com.intuit.karate - request:
+2 > GET https://conduit.productionready.io/api/tags
+2 > Host: api.realworld.io
+2 > Connection: Keep-Alive
+2 > User-Agent: Apache-HttpClient/4.5.13 (Java/11.0.15)
+2 > Accept-Encoding: gzip,deflate
+
+
+15:55:56.328 [main] DEBUG com.intuit.karate - response time in milliseconds: 611
+2 < 200
+2 < Date: Wed, 29 Jun 2022 18:55:56 GMT
+2 < Content-Type: application/json; charset=utf-8
+2 < Transfer-Encoding: chunked
+2 < Connection: keep-alive
+2 < X-Powered-By: Express
+2 < Access-Control-Allow-Origin: *
+2 < Etag: W/"44-qib2l7lCGku68eG2tPFSJV9lwX4"
+2 < Via: 1.1 vegur
+2 < CF-Cache-Status: DYNAMIC
+2 < Expect-CT: max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"
+2 < Report-To: {"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=bplswS5QVN0eC74HeN5bzUU3zsZgZzXN3WSwhdM5huaWN33HyIrdbOyuZ3F%2FKxsXEzT%2BwlV8EFRSFKMCAz9bGNoCmC%2FEBn6C%2FhB9pEFkm0fvfwzDa2Gcde6xUrK%2FScOCb3Uc"}],"group":"cf-nel","max_age":604800}
+2 < NEL: {"success_fraction":0,"report_to":"cf-nel","max_age":604800}
+2 < Server: cloudflare
+2 < CF-RAY: 7230e1169860a532-GRU
+2 < alt-svc: h3=":443"; ma=86400, h3-29=":443"; ma=86400
+{"tags":["implementations","welcome","introduction","codebaseShow"]}
+
+15:55:56.398 [main] INFO  com.intuit.karate - karate.env system property was: null 
+15:55:56.418 [main] DEBUG com.intuit.karate - request:
+1 > GET https://conduit.productionready.io/api/articles?offset=0&limit=10
+1 > Host: conduit.productionready.io
+1 > Connection: Keep-Alive
+1 > User-Agent: Apache-HttpClient/4.5.13 (Java/11.0.15)
+1 > Accept-Encoding: gzip,deflate
+
+
+15:55:56.627 [main] DEBUG com.intuit.karate - request:
+2 > GET https://conduit.productionready.io/api/articles?offset=0&limit=10
+2 > Host: api.realworld.io
+2 > Connection: Keep-Alive
+2 > User-Agent: Apache-HttpClient/4.5.13 (Java/11.0.15)
+2 > Accept-Encoding: gzip,deflate
+
+
+15:55:57.363 [main] DEBUG com.intuit.karate - response time in milliseconds: 735
+2 < 200
+2 < Date: Wed, 29 Jun 2022 18:55:57 GMT
+2 < Content-Type: application/json; charset=utf-8
+2 < Transfer-Encoding: chunked
+2 < Connection: keep-alive
+2 < X-Powered-By: Express
+2 < Access-Control-Allow-Origin: *
+2 < Etag: W/"6de-YHq56QZpbq1z0lnZ17imsZEjRDs"
+2 < Via: 1.1 vegur
+2 < CF-Cache-Status: DYNAMIC
+2 < Expect-CT: max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"
+2 < Report-To: {"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=GxXNekfmqEXh1XB0ZVKvTBx6cgzHemdC%2FsWe0UP7SQqoyceUzGDehcRjjijju2rurktXDD5ob71jAvDqWO14UFwd7ndmuWCR1PdghHfV1jOHwZ1A8BtrswqHSYZQZ94syx7%2F"}],"group":"cf-nel","max_age":604800}
+2 < NEL: {"success_fraction":0,"report_to":"cf-nel","max_age":604800}
+2 < Server: cloudflare
+2 < CF-RAY: 7230e11bccbda5c8-GRU
+2 < alt-svc: h3=":443"; ma=86400, h3-29=":443"; ma=86400
+{"articles":[{"slug":"Create-a-new-implementation-1","title":"Create a new implementation","description":"join the community by creating a new implementation","body":"Share your knowledge and enpower the community by creating a new implementation","tagList":["implementations"],"createdAt":"2021-11-24T12:11:08.212Z","updatedAt":"2021-11-24T12:11:08.212Z","favorited":false,"favoritesCount":2934,"author":{"username":"Gerome","bio":null,"image":"https://api.realworld.io/images/demo-avatar.png","following":false}},{"slug":"Explore-implementations-1","title":"Explore implementations","description":"discover the implementations created by the RealWorld community","body":"Over 100 implementations have been created using various languages, libraries, and frameworks.\n\nExplore them on CodebaseShow.","tagList":["codebaseShow","implementations"],"createdAt":"2021-11-24T12:11:07.952Z","updatedAt":"2021-11-24T12:11:07.952Z","favorited":false,"favoritesCount":1704,"author":{"username":"Gerome","bio":null,"image":"https://api.realworld.io/images/demo-avatar.png","following":false}},{"slug":"Welcome-to-RealWorld-project-1","title":"Welcome to RealWorld project","description":"Exemplary fullstack Medium.com clone powered by React, Angular, Node, Django, and many more","body":"See how the exact same Medium.com clone (called Conduit) is built using different frontends and backends. Yes, you can mix and match them, because they all adhere to the same API spec","tagList":["welcome","introduction"],"createdAt":"2021-11-24T12:11:07.557Z","updatedAt":"2021-11-24T12:11:07.557Z","favorited":false,"favoritesCount":1199,"author":{"username":"Gerome","bio":null,"image":"https://api.realworld.io/images/demo-avatar.png","following":false}}],"articlesCount":3}
+
+15:55:58.261 [main] INFO  com.intuit.karate.Suite - <<pass>> feature 1 of 1 (0 remaining) src/test/java/conduitApp/feature/HomePage.feature
+15:56:21.056 [main] DEBUG com.intuit.karate.Suite - [config] classpath:karate-config.js
+15:56:21.056 [main] INFO  com.intuit.karate.Suite - backed up existing 'target\karate-reports' dir to: target\karate-reports_1656528981056
+15:56:22.189 [main] INFO  com.intuit.karate - karate.env system property was: null 
+15:56:22.572 [main] DEBUG com.intuit.karate - request:
+1 > GET https://conduit.productionready.io/api/tags
+1 > Host: conduit.productionready.io
+1 > Connection: Keep-Alive
+1 > User-Agent: Apache-HttpClient/4.5.13 (Java/11.0.15)
+1 > Accept-Encoding: gzip,deflate
+
+
+15:56:23.078 [main] DEBUG com.intuit.karate - request:
+2 > GET https://conduit.productionready.io/api/tags
+2 > Host: api.realworld.io
+2 > Connection: Keep-Alive
+2 > User-Agent: Apache-HttpClient/4.5.13 (Java/11.0.15)
+2 > Accept-Encoding: gzip,deflate
+
+
+15:56:23.635 [main] DEBUG com.intuit.karate - response time in milliseconds: 557
+2 < 200
+2 < Date: Wed, 29 Jun 2022 18:56:23 GMT
+2 < Content-Type: application/json; charset=utf-8
+2 < Transfer-Encoding: chunked
+2 < Connection: keep-alive
+2 < X-Powered-By: Express
+2 < Access-Control-Allow-Origin: *
+2 < Etag: W/"44-qib2l7lCGku68eG2tPFSJV9lwX4"
+2 < Via: 1.1 vegur
+2 < CF-Cache-Status: DYNAMIC
+2 < Expect-CT: max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"
+2 < Report-To: {"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=N%2BKsGlsVmLp5eyuhtHD13M%2FKZ%2FY5kCgoGBfqMvMDMqN32eAqtVaPzt%2Fkkd3sK71Jf0gv885PF03BLtFiU6R87mF2BKK5eYJ9%2B9q6%2Bsn7NV6ZtYMoFu6EHtcoBmZPvxNBkvBt"}],"group":"cf-nel","max_age":604800}
+2 < NEL: {"success_fraction":0,"report_to":"cf-nel","max_age":604800}
+2 < Server: cloudflare
+2 < CF-RAY: 7230e1c12d62a688-GRU
+2 < alt-svc: h3=":443"; ma=86400, h3-29=":443"; ma=86400
+{"tags":["implementations","welcome","introduction","codebaseShow"]}
+
+15:56:24.435 [main] INFO  com.intuit.karate.Suite - <<pass>> feature 1 of 1 (0 remaining) src/test/java/conduitApp/feature/HomePage.feature
+15:58:02.665 [main] DEBUG com.intuit.karate.Suite - [config] classpath:karate-config.js
+15:58:02.674 [main] INFO  com.intuit.karate.Suite - backed up existing 'target\karate-reports' dir to: target\karate-reports_1656529082674
+15:58:03.680 [main] INFO  com.intuit.karate - karate.env system property was: null 
+15:58:04.204 [main] DEBUG com.intuit.karate - request:
+1 > GET https://conduit.productionready.io/api/tags
+1 > Host: conduit.productionready.io
+1 > Connection: Keep-Alive
+1 > User-Agent: Apache-HttpClient/4.5.13 (Java/11.0.15)
+1 > Accept-Encoding: gzip,deflate
+
+
+15:58:04.655 [main] DEBUG com.intuit.karate - request:
+2 > GET https://conduit.productionready.io/api/tags
+2 > Host: api.realworld.io
+2 > Connection: Keep-Alive
+2 > User-Agent: Apache-HttpClient/4.5.13 (Java/11.0.15)
+2 > Accept-Encoding: gzip,deflate
+
+
+15:58:05.258 [main] DEBUG com.intuit.karate - response time in milliseconds: 603
+2 < 200
+2 < Date: Wed, 29 Jun 2022 18:58:05 GMT
+2 < Content-Type: application/json; charset=utf-8
+2 < Transfer-Encoding: chunked
+2 < Connection: keep-alive
+2 < X-Powered-By: Express
+2 < Access-Control-Allow-Origin: *
+2 < Etag: W/"44-qib2l7lCGku68eG2tPFSJV9lwX4"
+2 < Via: 1.1 vegur
+2 < CF-Cache-Status: DYNAMIC
+2 < Expect-CT: max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"
+2 < Report-To: {"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=%2BhGNmSHbiQPykZci8fMZ3vkxKmdni7zAih7kf8FitDwbNkkAn8u%2BkX64uSvWkAk34uohxdfk%2FEm4AXLMnXfdTcbhS1BE63XpT%2BvitMDmeLV4yRC2wOXy2t945zrTlPjzvzaL"}],"group":"cf-nel","max_age":604800}
+2 < NEL: {"success_fraction":0,"report_to":"cf-nel","max_age":604800}
+2 < Server: cloudflare
+2 < CF-RAY: 7230e43c2b3951e0-GRU
+2 < alt-svc: h3=":443"; ma=86400, h3-29=":443"; ma=86400
+{"tags":["implementations","welcome","introduction","codebaseShow"]}
+
+15:58:05.325 [main] INFO  com.intuit.karate - karate.env system property was: null 
+15:58:05.325 [main] DEBUG com.intuit.karate - request:
+1 > GET https://conduit.productionready.io/api/articles?offset=0&limit=10
+1 > Host: conduit.productionready.io
+1 > Connection: Keep-Alive
+1 > User-Agent: Apache-HttpClient/4.5.13 (Java/11.0.15)
+1 > Accept-Encoding: gzip,deflate
+
+
+15:58:05.540 [main] DEBUG com.intuit.karate - request:
+2 > GET https://conduit.productionready.io/api/articles?offset=0&limit=10
+2 > Host: api.realworld.io
+2 > Connection: Keep-Alive
+2 > User-Agent: Apache-HttpClient/4.5.13 (Java/11.0.15)
+2 > Accept-Encoding: gzip,deflate
+
+
+15:58:06.313 [main] DEBUG com.intuit.karate - response time in milliseconds: 773
+2 < 200
+2 < Date: Wed, 29 Jun 2022 18:58:06 GMT
+2 < Content-Type: application/json; charset=utf-8
+2 < Transfer-Encoding: chunked
+2 < Connection: keep-alive
+2 < X-Powered-By: Express
+2 < Access-Control-Allow-Origin: *
+2 < Etag: W/"6de-YHq56QZpbq1z0lnZ17imsZEjRDs"
+2 < Via: 1.1 vegur
+2 < CF-Cache-Status: DYNAMIC
+2 < Expect-CT: max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"
+2 < Report-To: {"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=OIHWgrPcGNjG2bIshUWwrVut1RfJJ0UDGKVlSRazk8zucF6qAcdOp9dxOYWqTj3fJCXs9BMorVx3%2B9vwz7rxtQlkkFAKBlO3xny%2F5LTIyXHupELPrLU%2Bvzoe0kz8xr7tciIW"}],"group":"cf-nel","max_age":604800}
+2 < NEL: {"success_fraction":0,"report_to":"cf-nel","max_age":604800}
+2 < Server: cloudflare
+2 < CF-RAY: 7230e4418e36a479-GRU
+2 < alt-svc: h3=":443"; ma=86400, h3-29=":443"; ma=86400
+{"articles":[{"slug":"Create-a-new-implementation-1","title":"Create a new implementation","description":"join the community by creating a new implementation","body":"Share your knowledge and enpower the community by creating a new implementation","tagList":["implementations"],"createdAt":"2021-11-24T12:11:08.212Z","updatedAt":"2021-11-24T12:11:08.212Z","favorited":false,"favoritesCount":2934,"author":{"username":"Gerome","bio":null,"image":"https://api.realworld.io/images/demo-avatar.png","following":false}},{"slug":"Explore-implementations-1","title":"Explore implementations","description":"discover the implementations created by the RealWorld community","body":"Over 100 implementations have been created using various languages, libraries, and frameworks.\n\nExplore them on CodebaseShow.","tagList":["codebaseShow","implementations"],"createdAt":"2021-11-24T12:11:07.952Z","updatedAt":"2021-11-24T12:11:07.952Z","favorited":false,"favoritesCount":1704,"author":{"username":"Gerome","bio":null,"image":"https://api.realworld.io/images/demo-avatar.png","following":false}},{"slug":"Welcome-to-RealWorld-project-1","title":"Welcome to RealWorld project","description":"Exemplary fullstack Medium.com clone powered by React, Angular, Node, Django, and many more","body":"See how the exact same Medium.com clone (called Conduit) is built using different frontends and backends. Yes, you can mix and match them, because they all adhere to the same API spec","tagList":["welcome","introduction"],"createdAt":"2021-11-24T12:11:07.557Z","updatedAt":"2021-11-24T12:11:07.557Z","favorited":false,"favoritesCount":1199,"author":{"username":"Gerome","bio":null,"image":"https://api.realworld.io/images/demo-avatar.png","following":false}}],"articlesCount":3}
+
+15:58:07.060 [main] INFO  com.intuit.karate.Suite - <<pass>> feature 1 of 1 (0 remaining) src/test/java/conduitApp/feature/HomePage.feature
+15:58:23.078 [main] DEBUG com.intuit.karate.Suite - [config] classpath:karate-config.js
+15:58:23.095 [main] INFO  com.intuit.karate.Suite - backed up existing 'target\karate-reports' dir to: target\karate-reports_1656529103095
+15:58:24.244 [main] INFO  com.intuit.karate - karate.env system property was: null 
+15:58:24.666 [main] DEBUG com.intuit.karate - request:
+1 > GET https://conduit.productionready.io/api/tags
+1 > Host: conduit.productionready.io
+1 > Connection: Keep-Alive
+1 > User-Agent: Apache-HttpClient/4.5.13 (Java/11.0.15)
+1 > Accept-Encoding: gzip,deflate
+
+
+15:58:25.157 [main] DEBUG com.intuit.karate - request:
+2 > GET https://conduit.productionready.io/api/tags
+2 > Host: api.realworld.io
+2 > Connection: Keep-Alive
+2 > User-Agent: Apache-HttpClient/4.5.13 (Java/11.0.15)
+2 > Accept-Encoding: gzip,deflate
+
+
+15:58:25.752 [main] DEBUG com.intuit.karate - response time in milliseconds: 595
+2 < 200
+2 < Date: Wed, 29 Jun 2022 18:58:25 GMT
+2 < Content-Type: application/json; charset=utf-8
+2 < Transfer-Encoding: chunked
+2 < Connection: keep-alive
+2 < X-Powered-By: Express
+2 < Access-Control-Allow-Origin: *
+2 < Etag: W/"44-qib2l7lCGku68eG2tPFSJV9lwX4"
+2 < Via: 1.1 vegur
+2 < CF-Cache-Status: DYNAMIC
+2 < Expect-CT: max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"
+2 < Report-To: {"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=alc2QOc2cG9pzma9erzu8uARYVao%2Fqsm166or65gvtboSX6ptU%2BJsnNHJmyxKzbaKm9xg2A2a%2Bt3vuw%2FEsrCW4SLUNY8pqbx8zkjd7Hu4BWiJEcn4hpEK%2FC%2Fmumfjm9n0nzu"}],"group":"cf-nel","max_age":604800}
+2 < NEL: {"success_fraction":0,"report_to":"cf-nel","max_age":604800}
+2 < Server: cloudflare
+2 < CF-RAY: 7230e4bc298ea5a3-GRU
+2 < alt-svc: h3=":443"; ma=86400, h3-29=":443"; ma=86400
+{"tags":["implementations","welcome","introduction","codebaseShow"]}
+
+15:58:26.500 [main] INFO  com.intuit.karate.Suite - <<pass>> feature 1 of 1 (0 remaining) src/test/java/conduitApp/feature/HomePage.feature
+16:29:37.471 [main] DEBUG com.intuit.karate.Suite - [config] classpath:karate-config.js
+16:29:37.482 [main] INFO  com.intuit.karate.Suite - backed up existing 'target\karate-reports' dir to: target\karate-reports_1656530977479
+16:29:37.517 [main] INFO  c.intuit.karate.core.FeatureRuntime - found scenario at line: 20 - ^Create and delete article$
+16:29:38.774 [main] INFO  com.intuit.karate - karate.env system property was: null 
+16:29:39.053 [main] ERROR com.intuit.karate - src/test/java/conduitApp/feature/Articles.feature:7
+And request '{"user": {"email": "hilarioleozinho@gmail.com","password": "88086123"}}
+js failed:
+>>>>
+01: '{"user": {"email": "hilarioleozinho@gmail.com","password": "88086123"}}
+<<<<
+org.graalvm.polyglot.PolyglotException: SyntaxError: Unnamed:1:72 Missing close quote
+'{"user": {"email": "hilarioleozinho@gmail.com","password": "88086123"}}
+                                                                        ^
+
+- org.graalvm.polyglot.Context.eval(Context.java:401)
+- com.intuit.karate.graal.JsEngine.evalForValue(JsEngine.java:141)
+- com.intuit.karate.graal.JsEngine.eval(JsEngine.java:137)
+- com.intuit.karate.core.ScenarioEngine.evalJs(ScenarioEngine.java:1344)
+- com.intuit.karate.core.ScenarioEngine.evalKarateExpression(ScenarioEngine.java:2373)
+- com.intuit.karate.core.ScenarioEngine.evalKarateExpression(ScenarioEngine.java:2292)
+- com.intuit.karate.core.ScenarioEngine.request(ScenarioEngine.java:527)
+
+src/test/java/conduitApp/feature/Articles.feature:7
+16:29:39.843 [main] INFO  com.intuit.karate.Suite - <<fail>> feature 1 of 1 (0 remaining) src/test/java/conduitApp/feature/Articles.feature
+16:31:51.683 [main] DEBUG com.intuit.karate.Suite - [config] classpath:karate-config.js
+16:31:51.699 [main] INFO  com.intuit.karate.Suite - backed up existing 'target\karate-reports' dir to: target\karate-reports_1656531111692
+16:31:52.748 [main] INFO  com.intuit.karate - karate.env system property was: null 
+16:31:53.484 [main] DEBUG com.intuit.karate - request:
+1 > POST https://conduit.productionready.io/api/users/login
+1 > Content-Type: application/json; charset=UTF-8
+1 > Content-Length: 68
+1 > Host: conduit.productionready.io
+1 > Connection: Keep-Alive
+1 > User-Agent: Apache-HttpClient/4.5.13 (Java/11.0.15)
+1 > Accept-Encoding: gzip,deflate
+{"user":{"email":"hilarioleozinho@gmail.com","password":"88086123"}}
+
+16:31:54.044 [main] DEBUG com.intuit.karate - request:
+2 > POST https://conduit.productionready.io/api/users/login
+2 > Content-Type: application/json; charset=UTF-8
+2 > Content-Length: 68
+2 > Host: api.realworld.io
+2 > Connection: Keep-Alive
+2 > User-Agent: Apache-HttpClient/4.5.13 (Java/11.0.15)
+2 > Accept-Encoding: gzip,deflate
+{"user":{"email":"hilarioleozinho@gmail.com","password":"88086123"}}
+
+16:31:54.716 [main] DEBUG com.intuit.karate - response time in milliseconds: 656
+2 < 200
+2 < Date: Wed, 29 Jun 2022 19:31:54 GMT
+2 < Content-Type: application/json; charset=utf-8
+2 < Transfer-Encoding: chunked
+2 < Connection: keep-alive
+2 < X-Powered-By: Express
+2 < Access-Control-Allow-Origin: *
+2 < Etag: W/"134-4zbq3aNWdG3YFg+bwyiYieJP1uk"
+2 < Via: 1.1 vegur
+2 < CF-Cache-Status: DYNAMIC
+2 < Expect-CT: max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"
+2 < Report-To: {"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=dlSfMcVuTKeKlDmcm%2BeHenQ7xllnnX0bmAR3Qn2iS1noaABa4H%2B7f9rtKouWeUofU7ynx9Ti49HURYs1Jb%2B7OvNytE3BMIbwpmsqi%2FI7LOT%2BnhWHDxY22HsRzO2rHQZfnrHZ"}],"group":"cf-nel","max_age":604800}
+2 < NEL: {"success_fraction":0,"report_to":"cf-nel","max_age":604800}
+2 < Server: cloudflare
+2 < CF-RAY: 723115c88dc8a55c-GRU
+2 < alt-svc: h3=":443"; ma=86400, h3-29=":443"; ma=86400
+{"user":{"email":"hilarioleozinho@gmail.com","username":"leonardo","bio":null,"image":null,"token":"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImhpbGFyaW9sZW96aW5ob0BnbWFpbC5jb20iLCJ1c2VybmFtZSI6Imxlb25hcmRvIiwiaWF0IjoxNjU2NTMxMTE0LCJleHAiOjE2NjE3MTUxMTR9.aiXJ-WgtKiB1-c0t-UXHaDpxfRU1dGxwVNlz9XeAr_U"}}
+
+16:31:54.718 [main] DEBUG com.intuit.karate - request:
+3 > POST https://conduit.productionready.io/api/articles
+3 > Authorization: Token eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImhpbGFyaW9sZW96aW5ob0BnbWFpbC5jb20iLCJ1c2VybmFtZSI6Imxlb25hcmRvIiwiaWF0IjoxNjU2NTMxMTE0LCJleHAiOjE2NjE3MTUxMTR9.aiXJ-WgtKiB1-c0t-UXHaDpxfRU1dGxwVNlz9XeAr_U
+3 > Content-Type: application/json; charset=UTF-8
+3 > Content-Length: 75
+3 > Host: conduit.productionready.io
+3 > Connection: Keep-Alive
+3 > User-Agent: Apache-HttpClient/4.5.13 (Java/11.0.15)
+3 > Accept-Encoding: gzip,deflate
+{"article":{"tagList":[],"title":"bla","description":"test","body":"body"}}
+
+16:31:54.924 [main] DEBUG com.intuit.karate - request:
+4 > POST https://conduit.productionready.io/api/articles
+4 > Authorization: Token eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImhpbGFyaW9sZW96aW5ob0BnbWFpbC5jb20iLCJ1c2VybmFtZSI6Imxlb25hcmRvIiwiaWF0IjoxNjU2NTMxMTE0LCJleHAiOjE2NjE3MTUxMTR9.aiXJ-WgtKiB1-c0t-UXHaDpxfRU1dGxwVNlz9XeAr_U
+4 > Content-Type: application/json; charset=UTF-8
+4 > Content-Length: 75
+4 > Host: api.realworld.io
+4 > Connection: Keep-Alive
+4 > User-Agent: Apache-HttpClient/4.5.13 (Java/11.0.15)
+4 > Accept-Encoding: gzip,deflate
+{"article":{"tagList":[],"title":"bla","description":"test","body":"body"}}
+
+16:31:55.364 [main] DEBUG com.intuit.karate - response time in milliseconds: 438
+4 < 422
+4 < Date: Wed, 29 Jun 2022 19:31:55 GMT
+4 < Content-Type: application/json; charset=utf-8
+4 < Content-Length: 39
+4 < Connection: keep-alive
+4 < X-Powered-By: Express
+4 < Access-Control-Allow-Origin: *
+4 < Etag: W/"27-BNeuaWQ7DHvW/r+pl+qdJiF06Is"
+4 < Via: 1.1 vegur
+4 < CF-Cache-Status: DYNAMIC
+4 < Expect-CT: max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"
+4 < Report-To: {"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=OmFcSy%2FE16zAS9fuUX63JERDSEzYoAjcCPvVxDJlnVWb94kionr2dSKEzMwSw9CikHhyCCSxQHOBsh9wmnc4MaQkR2JQY4Pl%2F6GURcGvTnpwhSeFWax%2FV6FDN1n0BZcXPyWL"}],"group":"cf-nel","max_age":604800}
+4 < NEL: {"success_fraction":0,"report_to":"cf-nel","max_age":604800}
+4 < Server: cloudflare
+4 < CF-RAY: 723115cd8f55a5e6-GRU
+4 < alt-svc: h3=":443"; ma=86400, h3-29=":443"; ma=86400
+{"errors":{"title":["must be unique"]}}
+
+16:31:55.369 [main] ERROR com.intuit.karate - src/test/java/conduitApp/feature/Articles.feature:17
+Then status 200
+status code was: 422, expected: 200, response time in milliseconds: 438, url: https://conduit.productionready.io/api/articles, response: 
+{"errors":{"title":["must be unique"]}}
+src/test/java/conduitApp/feature/Articles.feature:17
+16:31:55.372 [main] INFO  com.intuit.karate - karate.env system property was: null 
+16:31:55.372 [main] DEBUG com.intuit.karate - request:
+1 > POST https://conduit.productionready.io/api/users/login
+1 > Content-Type: application/json; charset=UTF-8
+1 > Content-Length: 68
+1 > Host: conduit.productionready.io
+1 > Connection: Keep-Alive
+1 > User-Agent: Apache-HttpClient/4.5.13 (Java/11.0.15)
+1 > Accept-Encoding: gzip,deflate
+{"user":{"email":"hilarioleozinho@gmail.com","password":"88086123"}}
+
+16:31:55.602 [main] DEBUG com.intuit.karate - request:
+2 > POST https://conduit.productionready.io/api/users/login
+2 > Content-Type: application/json; charset=UTF-8
+2 > Content-Length: 68
+2 > Host: api.realworld.io
+2 > Connection: Keep-Alive
+2 > User-Agent: Apache-HttpClient/4.5.13 (Java/11.0.15)
+2 > Accept-Encoding: gzip,deflate
+{"user":{"email":"hilarioleozinho@gmail.com","password":"88086123"}}
+
+16:31:56.120 [main] DEBUG com.intuit.karate - response time in milliseconds: 518
+2 < 200
+2 < Date: Wed, 29 Jun 2022 19:31:56 GMT
+2 < Content-Type: application/json; charset=utf-8
+2 < Transfer-Encoding: chunked
+2 < Connection: keep-alive
+2 < X-Powered-By: Express
+2 < Access-Control-Allow-Origin: *
+2 < Etag: W/"134-ZWxu3cTP9tfeEF7LckFR1Ab5WxY"
+2 < Via: 1.1 vegur
+2 < CF-Cache-Status: DYNAMIC
+2 < Expect-CT: max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"
+2 < Report-To: {"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=cUD256udJsDeaORkx7Nq7h%2BLJ3QV%2FCG39%2BmpVwuuGzNkPNKWoMbEcQKPXth3DbdlU1zWDt6%2Fc1oSV62tjqn2zx25cUIsWoR4w6LIJODz%2Bo7JnR9y%2B4FZ2Ym1TFy3LIXdd3er"}],"group":"cf-nel","max_age":604800}
+2 < NEL: {"success_fraction":0,"report_to":"cf-nel","max_age":604800}
+2 < Server: cloudflare
+2 < CF-RAY: 723115d1b99da4dd-GRU
+2 < alt-svc: h3=":443"; ma=86400, h3-29=":443"; ma=86400
+{"user":{"email":"hilarioleozinho@gmail.com","username":"leonardo","bio":null,"image":null,"token":"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImhpbGFyaW9sZW96aW5ob0BnbWFpbC5jb20iLCJ1c2VybmFtZSI6Imxlb25hcmRvIiwiaWF0IjoxNjU2NTMxMTE2LCJleHAiOjE2NjE3MTUxMTZ9.Hzab7Xp2okLM3fGPt495gUuzUz4wsjwUsuOqN62gGQQ"}}
+
+16:31:56.123 [main] DEBUG com.intuit.karate - request:
+3 > POST https://conduit.productionready.io/api/articles
+3 > Authorization: Token eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImhpbGFyaW9sZW96aW5ob0BnbWFpbC5jb20iLCJ1c2VybmFtZSI6Imxlb25hcmRvIiwiaWF0IjoxNjU2NTMxMTE2LCJleHAiOjE2NjE3MTUxMTZ9.Hzab7Xp2okLM3fGPt495gUuzUz4wsjwUsuOqN62gGQQ
+3 > Content-Type: application/json; charset=UTF-8
+3 > Content-Length: 86
+3 > Host: conduit.productionready.io
+3 > Connection: Keep-Alive
+3 > User-Agent: Apache-HttpClient/4.5.13 (Java/11.0.15)
+3 > Accept-Encoding: gzip,deflate
+{"article":{"tagList":[],"title":"delete article","description":"test","body":"body"}}
+
+16:31:56.301 [main] DEBUG com.intuit.karate - request:
+4 > POST https://conduit.productionready.io/api/articles
+4 > Authorization: Token eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImhpbGFyaW9sZW96aW5ob0BnbWFpbC5jb20iLCJ1c2VybmFtZSI6Imxlb25hcmRvIiwiaWF0IjoxNjU2NTMxMTE2LCJleHAiOjE2NjE3MTUxMTZ9.Hzab7Xp2okLM3fGPt495gUuzUz4wsjwUsuOqN62gGQQ
+4 > Content-Type: application/json; charset=UTF-8
+4 > Content-Length: 86
+4 > Host: api.realworld.io
+4 > Connection: Keep-Alive
+4 > User-Agent: Apache-HttpClient/4.5.13 (Java/11.0.15)
+4 > Accept-Encoding: gzip,deflate
+{"article":{"tagList":[],"title":"delete article","description":"test","body":"body"}}
+
+16:31:56.766 [main] DEBUG com.intuit.karate - response time in milliseconds: 465
+4 < 200
+4 < Date: Wed, 29 Jun 2022 19:31:56 GMT
+4 < Content-Type: application/json; charset=utf-8
+4 < Transfer-Encoding: chunked
+4 < Connection: keep-alive
+4 < X-Powered-By: Express
+4 < Access-Control-Allow-Origin: *
+4 < Etag: W/"161-bhENj8gRWB3VIcB55KtCywhW4Hc"
+4 < Via: 1.1 vegur
+4 < CF-Cache-Status: DYNAMIC
+4 < Expect-CT: max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"
+4 < Report-To: {"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=sHuD6zPd%2Fzn7zBzSNMQOBphvF7kd2A9LvBT5mCv2iGRYgbUYD35dv1zx8UX3x3qFJGPmDzUJu3Sd5EWv%2FZ3SsBsdoVjLw80odDhgcAykiXIeOACNAD9v%2FjspStFBuEvMI1sa"}],"group":"cf-nel","max_age":604800}
+4 < NEL: {"success_fraction":0,"report_to":"cf-nel","max_age":604800}
+4 < Server: cloudflare
+4 < CF-RAY: 723115d619425205-GRU
+4 < alt-svc: h3=":443"; ma=86400, h3-29=":443"; ma=86400
+{"article":{"slug":"delete-article-57914","title":"delete article","description":"test","body":"body","tagList":[],"createdAt":"2022-06-29T19:31:56.713Z","updatedAt":"2022-06-29T19:31:56.713Z","favorited":false,"favoritesCount":0,"author":{"username":"leonardo","bio":null,"image":"https://api.realworld.io/images/smiley-cyrus.jpeg","following":false}}}
+
+16:31:56.766 [main] DEBUG com.intuit.karate - request:
+5 > GET https://conduit.productionready.io/api/articles?offset=0&limit=10
+5 > Host: conduit.productionready.io
+5 > Connection: Keep-Alive
+5 > User-Agent: Apache-HttpClient/4.5.13 (Java/11.0.15)
+5 > Accept-Encoding: gzip,deflate
+
+
+16:31:56.991 [main] DEBUG com.intuit.karate - request:
+6 > GET https://conduit.productionready.io/api/articles?offset=0&limit=10
+6 > Host: api.realworld.io
+6 > Connection: Keep-Alive
+6 > User-Agent: Apache-HttpClient/4.5.13 (Java/11.0.15)
+6 > Accept-Encoding: gzip,deflate
+
+
+16:31:57.685 [main] DEBUG com.intuit.karate - response time in milliseconds: 694
+6 < 200
+6 < Date: Wed, 29 Jun 2022 19:31:57 GMT
+6 < Content-Type: application/json; charset=utf-8
+6 < Transfer-Encoding: chunked
+6 < Connection: keep-alive
+6 < X-Powered-By: Express
+6 < Access-Control-Allow-Origin: *
+6 < Etag: W/"6de-M0iUj7tFG3fWFQKNQUgb2MUqZ58"
+6 < Via: 1.1 vegur
+6 < CF-Cache-Status: DYNAMIC
+6 < Expect-CT: max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"
+6 < Report-To: {"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=cEPptvJxt9v9NEasQKGVEuFDzIbW0KH2P1vqfSYctUUmLZUdDuib3lYU2nkJ%2FwalN26cRU214xd4HL4YA3SeJkIhYiUNt5RfBgLdN%2FIv2F%2Bx5%2FafXcZM7ZqOhSG4de9wyooo"}],"group":"cf-nel","max_age":604800}
+6 < NEL: {"success_fraction":0,"report_to":"cf-nel","max_age":604800}
+6 < Server: cloudflare
+6 < CF-RAY: 723115da5d7aa61c-GRU
+6 < alt-svc: h3=":443"; ma=86400, h3-29=":443"; ma=86400
+{"articles":[{"slug":"Create-a-new-implementation-1","title":"Create a new implementation","description":"join the community by creating a new implementation","body":"Share your knowledge and enpower the community by creating a new implementation","tagList":["implementations"],"createdAt":"2021-11-24T12:11:08.212Z","updatedAt":"2021-11-24T12:11:08.212Z","favorited":false,"favoritesCount":2935,"author":{"username":"Gerome","bio":null,"image":"https://api.realworld.io/images/demo-avatar.png","following":false}},{"slug":"Explore-implementations-1","title":"Explore implementations","description":"discover the implementations created by the RealWorld community","body":"Over 100 implementations have been created using various languages, libraries, and frameworks.\n\nExplore them on CodebaseShow.","tagList":["codebaseShow","implementations"],"createdAt":"2021-11-24T12:11:07.952Z","updatedAt":"2021-11-24T12:11:07.952Z","favorited":false,"favoritesCount":1705,"author":{"username":"Gerome","bio":null,"image":"https://api.realworld.io/images/demo-avatar.png","following":false}},{"slug":"Welcome-to-RealWorld-project-1","title":"Welcome to RealWorld project","description":"Exemplary fullstack Medium.com clone powered by React, Angular, Node, Django, and many more","body":"See how the exact same Medium.com clone (called Conduit) is built using different frontends and backends. Yes, you can mix and match them, because they all adhere to the same API spec","tagList":["welcome","introduction"],"createdAt":"2021-11-24T12:11:07.557Z","updatedAt":"2021-11-24T12:11:07.557Z","favorited":false,"favoritesCount":1199,"author":{"username":"Gerome","bio":null,"image":"https://api.realworld.io/images/demo-avatar.png","following":false}}],"articlesCount":3}
+
+16:31:57.685 [main] ERROR com.intuit.karate - src/test/java/conduitApp/feature/Articles.feature:32
+And match response.articles[0].title == 'delete article'
+match failed: EQUALS
+  $ | not equal (STRING:STRING)
+  'Create a new implementation'
+  'delete article'
+
+src/test/java/conduitApp/feature/Articles.feature:32
+16:31:58.640 [main] INFO  com.intuit.karate.Suite - <<fail>> feature 1 of 1 (0 remaining) src/test/java/conduitApp/feature/Articles.feature
+16:34:19.056 [main] DEBUG com.intuit.karate.Suite - [config] classpath:karate-config.js
+16:34:19.069 [main] INFO  com.intuit.karate.Suite - backed up existing 'target\karate-reports' dir to: target\karate-reports_1656531259065
+16:34:20.297 [main] INFO  com.intuit.karate - karate.env system property was: null 
+16:34:20.919 [main] DEBUG com.intuit.karate - request:
+1 > POST https://conduit.productionready.io/api/users/login
+1 > Content-Type: application/json; charset=UTF-8
+1 > Content-Length: 68
+1 > Host: conduit.productionready.io
+1 > Connection: Keep-Alive
+1 > User-Agent: Apache-HttpClient/4.5.13 (Java/11.0.15)
+1 > Accept-Encoding: gzip,deflate
+{"user":{"email":"hilarioleozinho@gmail.com","password":"88086123"}}
+
+16:34:21.435 [main] DEBUG com.intuit.karate - request:
+2 > POST https://conduit.productionready.io/api/users/login
+2 > Content-Type: application/json; charset=UTF-8
+2 > Content-Length: 68
+2 > Host: api.realworld.io
+2 > Connection: Keep-Alive
+2 > User-Agent: Apache-HttpClient/4.5.13 (Java/11.0.15)
+2 > Accept-Encoding: gzip,deflate
+{"user":{"email":"hilarioleozinho@gmail.com","password":"88086123"}}
+
+16:34:22.031 [main] DEBUG com.intuit.karate - response time in milliseconds: 596
+2 < 200
+2 < Date: Wed, 29 Jun 2022 19:34:22 GMT
+2 < Content-Type: application/json; charset=utf-8
+2 < Transfer-Encoding: chunked
+2 < Connection: keep-alive
+2 < X-Powered-By: Express
+2 < Access-Control-Allow-Origin: *
+2 < Etag: W/"134-HGDu2NT+43CfxZ4QdU9246jfcKU"
+2 < Via: 1.1 vegur
+2 < CF-Cache-Status: DYNAMIC
+2 < Expect-CT: max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"
+2 < Report-To: {"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=OHp9%2FXSShSvSV0E%2FWaaQFA0zE5EgfmKUWqYUAE0%2FJudnO773tucom7at%2BNhpbxjgeGGxp4lUc8zIU58gCKFBqu8Gl7RsI%2BUqA%2BdNILRhH5mswup5DS%2BlO6qrFUVS7Cx53B4N"}],"group":"cf-nel","max_age":604800}
+2 < NEL: {"success_fraction":0,"report_to":"cf-nel","max_age":604800}
+2 < Server: cloudflare
+2 < CF-RAY: 723119617e284d35-GRU
+2 < alt-svc: h3=":443"; ma=86400, h3-29=":443"; ma=86400
+{"user":{"email":"hilarioleozinho@gmail.com","username":"leonardo","bio":null,"image":null,"token":"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImhpbGFyaW9sZW96aW5ob0BnbWFpbC5jb20iLCJ1c2VybmFtZSI6Imxlb25hcmRvIiwiaWF0IjoxNjU2NTMxMjYxLCJleHAiOjE2NjE3MTUyNjF9.Qn12Q7_8nWkkZJHchCE3D_1pLST-1G6AuiJs0njIbAI"}}
+
+16:34:22.057 [main] DEBUG com.intuit.karate - request:
+3 > POST https://conduit.productionready.io/api/articles
+3 > Authorization: Token eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImhpbGFyaW9sZW96aW5ob0BnbWFpbC5jb20iLCJ1c2VybmFtZSI6Imxlb25hcmRvIiwiaWF0IjoxNjU2NTMxMjYxLCJleHAiOjE2NjE3MTUyNjF9.Qn12Q7_8nWkkZJHchCE3D_1pLST-1G6AuiJs0njIbAI
+3 > Content-Type: application/json; charset=UTF-8
+3 > Content-Length: 75
+3 > Host: conduit.productionready.io
+3 > Connection: Keep-Alive
+3 > User-Agent: Apache-HttpClient/4.5.13 (Java/11.0.15)
+3 > Accept-Encoding: gzip,deflate
+{"article":{"tagList":[],"title":"bla","description":"test","body":"body"}}
+
+16:34:22.267 [main] DEBUG com.intuit.karate - request:
+4 > POST https://conduit.productionready.io/api/articles
+4 > Authorization: Token eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImhpbGFyaW9sZW96aW5ob0BnbWFpbC5jb20iLCJ1c2VybmFtZSI6Imxlb25hcmRvIiwiaWF0IjoxNjU2NTMxMjYxLCJleHAiOjE2NjE3MTUyNjF9.Qn12Q7_8nWkkZJHchCE3D_1pLST-1G6AuiJs0njIbAI
+4 > Content-Type: application/json; charset=UTF-8
+4 > Content-Length: 75
+4 > Host: api.realworld.io
+4 > Connection: Keep-Alive
+4 > User-Agent: Apache-HttpClient/4.5.13 (Java/11.0.15)
+4 > Accept-Encoding: gzip,deflate
+{"article":{"tagList":[],"title":"bla","description":"test","body":"body"}}
+
+16:34:22.709 [main] DEBUG com.intuit.karate - response time in milliseconds: 442
+4 < 422
+4 < Date: Wed, 29 Jun 2022 19:34:22 GMT
+4 < Content-Type: application/json; charset=utf-8
+4 < Content-Length: 39
+4 < Connection: keep-alive
+4 < X-Powered-By: Express
+4 < Access-Control-Allow-Origin: *
+4 < Etag: W/"27-BNeuaWQ7DHvW/r+pl+qdJiF06Is"
+4 < Via: 1.1 vegur
+4 < CF-Cache-Status: DYNAMIC
+4 < Expect-CT: max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"
+4 < Report-To: {"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=1FEvjc6vDqiEL83mDMV%2BBgRp%2FhqAZ1wyQjgg96BKsfBca%2FXJl5t%2BAJBM1GXQJaCex28%2B4hZ%2BPRZ3PRhNWc%2FKzhKmub9nqfa3lyYLuWxJ9YgoB0casLY1aUMPkqG2wB95dJRF"}],"group":"cf-nel","max_age":604800}
+4 < NEL: {"success_fraction":0,"report_to":"cf-nel","max_age":604800}
+4 < Server: cloudflare
+4 < CF-RAY: 723119667a19a4c0-GRU
+4 < alt-svc: h3=":443"; ma=86400, h3-29=":443"; ma=86400
+{"errors":{"title":["must be unique"]}}
+
+16:34:22.725 [main] ERROR com.intuit.karate - src/test/java/conduitApp/feature/Articles.feature:17
+Then status 200
+status code was: 422, expected: 200, response time in milliseconds: 442, url: https://conduit.productionready.io/api/articles, response: 
+{"errors":{"title":["must be unique"]}}
+src/test/java/conduitApp/feature/Articles.feature:17
+16:34:22.725 [main] INFO  com.intuit.karate - karate.env system property was: null 
+16:34:22.725 [main] DEBUG com.intuit.karate - request:
+1 > POST https://conduit.productionready.io/api/users/login
+1 > Content-Type: application/json; charset=UTF-8
+1 > Content-Length: 68
+1 > Host: conduit.productionready.io
+1 > Connection: Keep-Alive
+1 > User-Agent: Apache-HttpClient/4.5.13 (Java/11.0.15)
+1 > Accept-Encoding: gzip,deflate
+{"user":{"email":"hilarioleozinho@gmail.com","password":"88086123"}}
+
+16:34:22.931 [main] DEBUG com.intuit.karate - request:
+2 > POST https://conduit.productionready.io/api/users/login
+2 > Content-Type: application/json; charset=UTF-8
+2 > Content-Length: 68
+2 > Host: api.realworld.io
+2 > Connection: Keep-Alive
+2 > User-Agent: Apache-HttpClient/4.5.13 (Java/11.0.15)
+2 > Accept-Encoding: gzip,deflate
+{"user":{"email":"hilarioleozinho@gmail.com","password":"88086123"}}
+
+16:34:23.482 [main] DEBUG com.intuit.karate - response time in milliseconds: 551
+2 < 200
+2 < Date: Wed, 29 Jun 2022 19:34:23 GMT
+2 < Content-Type: application/json; charset=utf-8
+2 < Transfer-Encoding: chunked
+2 < Connection: keep-alive
+2 < X-Powered-By: Express
+2 < Access-Control-Allow-Origin: *
+2 < Etag: W/"134-VrB3+zXneQKi/KPIUB+FcZ35UlQ"
+2 < Via: 1.1 vegur
+2 < CF-Cache-Status: DYNAMIC
+2 < Expect-CT: max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"
+2 < Report-To: {"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=q%2Fo9jL5iQ8eywOmOp3wYHw3dZ%2BPqMNPCyXDOHILZK6EOSFQ4xbpkbRNnyzrZbq0CytkS7RvBnsHSDaQoBxTmAAON5FpHKpp%2FpZTSFk7s%2BIckTyMr7wCkdqIwLDWZ5xPrdJtJ"}],"group":"cf-nel","max_age":604800}
+2 < NEL: {"success_fraction":0,"report_to":"cf-nel","max_age":604800}
+2 < Server: cloudflare
+2 < CF-RAY: 7231196aa8c4a5b0-GRU
+2 < alt-svc: h3=":443"; ma=86400, h3-29=":443"; ma=86400
+{"user":{"email":"hilarioleozinho@gmail.com","username":"leonardo","bio":null,"image":null,"token":"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImhpbGFyaW9sZW96aW5ob0BnbWFpbC5jb20iLCJ1c2VybmFtZSI6Imxlb25hcmRvIiwiaWF0IjoxNjU2NTMxMjYzLCJleHAiOjE2NjE3MTUyNjN9.-8rD3pHhggo1pv8-LU5JQNQJRPDytOXsFGjOU3Yqqu8"}}
+
+16:34:23.482 [main] DEBUG com.intuit.karate - request:
+3 > POST https://conduit.productionready.io/api/articles
+3 > Authorization: Token eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImhpbGFyaW9sZW96aW5ob0BnbWFpbC5jb20iLCJ1c2VybmFtZSI6Imxlb25hcmRvIiwiaWF0IjoxNjU2NTMxMjYzLCJleHAiOjE2NjE3MTUyNjN9.-8rD3pHhggo1pv8-LU5JQNQJRPDytOXsFGjOU3Yqqu8
+3 > Content-Type: application/json; charset=UTF-8
+3 > Content-Length: 86
+3 > Host: conduit.productionready.io
+3 > Connection: Keep-Alive
+3 > User-Agent: Apache-HttpClient/4.5.13 (Java/11.0.15)
+3 > Accept-Encoding: gzip,deflate
+{"article":{"tagList":[],"title":"delete article","description":"test","body":"body"}}
+
+16:34:23.665 [main] DEBUG com.intuit.karate - request:
+4 > POST https://conduit.productionready.io/api/articles
+4 > Authorization: Token eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImhpbGFyaW9sZW96aW5ob0BnbWFpbC5jb20iLCJ1c2VybmFtZSI6Imxlb25hcmRvIiwiaWF0IjoxNjU2NTMxMjYzLCJleHAiOjE2NjE3MTUyNjN9.-8rD3pHhggo1pv8-LU5JQNQJRPDytOXsFGjOU3Yqqu8
+4 > Content-Type: application/json; charset=UTF-8
+4 > Content-Length: 86
+4 > Host: api.realworld.io
+4 > Connection: Keep-Alive
+4 > User-Agent: Apache-HttpClient/4.5.13 (Java/11.0.15)
+4 > Accept-Encoding: gzip,deflate
+{"article":{"tagList":[],"title":"delete article","description":"test","body":"body"}}
+
+16:34:24.116 [main] DEBUG com.intuit.karate - response time in milliseconds: 451
+4 < 422
+4 < Date: Wed, 29 Jun 2022 19:34:24 GMT
+4 < Content-Type: application/json; charset=utf-8
+4 < Content-Length: 39
+4 < Connection: keep-alive
+4 < X-Powered-By: Express
+4 < Access-Control-Allow-Origin: *
+4 < Etag: W/"27-BNeuaWQ7DHvW/r+pl+qdJiF06Is"
+4 < Via: 1.1 vegur
+4 < CF-Cache-Status: DYNAMIC
+4 < Expect-CT: max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"
+4 < Report-To: {"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=Urxz8qeALXMCk%2BphLA2aizbL6lwBiFKDrThLwYZUZOK%2BwZuQuAw49Va4D%2B4L0hnkSRFuob3EJNmVutDc8TN6FRih1r3A1UQaslSshfdeN7Yc2%2Ffkmbopz1Krak86%2BNMi6azT"}],"group":"cf-nel","max_age":604800}
+4 < NEL: {"success_fraction":0,"report_to":"cf-nel","max_age":604800}
+4 < Server: cloudflare
+4 < CF-RAY: 7231196f4937a586-GRU
+4 < alt-svc: h3=":443"; ma=86400, h3-29=":443"; ma=86400
+{"errors":{"title":["must be unique"]}}
+
+16:34:24.116 [main] ERROR com.intuit.karate - src/test/java/conduitApp/feature/Articles.feature:25
+Then status 200
+status code was: 422, expected: 200, response time in milliseconds: 451, url: https://conduit.productionready.io/api/articles, response: 
+{"errors":{"title":["must be unique"]}}
+src/test/java/conduitApp/feature/Articles.feature:25
+16:34:24.910 [main] INFO  com.intuit.karate.Suite - <<fail>> feature 1 of 1 (0 remaining) src/test/java/conduitApp/feature/Articles.feature
+16:35:02.625 [main] DEBUG com.intuit.karate.Suite - [config] classpath:karate-config.js
+16:35:02.625 [main] INFO  com.intuit.karate.Suite - backed up existing 'target\karate-reports' dir to: target\karate-reports_1656531302625
+16:35:02.657 [main] INFO  c.intuit.karate.core.FeatureRuntime - found scenario at line: 20 - ^Create and delete article$
+16:35:03.527 [main] INFO  com.intuit.karate - karate.env system property was: null 
+16:35:04.098 [main] DEBUG com.intuit.karate - request:
+1 > POST https://conduit.productionready.io/api/users/login
+1 > Content-Type: application/json; charset=UTF-8
+1 > Content-Length: 68
+1 > Host: conduit.productionready.io
+1 > Connection: Keep-Alive
+1 > User-Agent: Apache-HttpClient/4.5.13 (Java/11.0.15)
+1 > Accept-Encoding: gzip,deflate
+{"user":{"email":"hilarioleozinho@gmail.com","password":"88086123"}}
+
+16:35:04.539 [main] DEBUG com.intuit.karate - request:
+2 > POST https://conduit.productionready.io/api/users/login
+2 > Content-Type: application/json; charset=UTF-8
+2 > Content-Length: 68
+2 > Host: api.realworld.io
+2 > Connection: Keep-Alive
+2 > User-Agent: Apache-HttpClient/4.5.13 (Java/11.0.15)
+2 > Accept-Encoding: gzip,deflate
+{"user":{"email":"hilarioleozinho@gmail.com","password":"88086123"}}
+
+16:35:05.102 [main] DEBUG com.intuit.karate - response time in milliseconds: 561
+2 < 200
+2 < Date: Wed, 29 Jun 2022 19:35:05 GMT
+2 < Content-Type: application/json; charset=utf-8
+2 < Transfer-Encoding: chunked
+2 < Connection: keep-alive
+2 < X-Powered-By: Express
+2 < Access-Control-Allow-Origin: *
+2 < Etag: W/"134-XQtQOWRXZt/h7P8/1qRDqHmDbAY"
+2 < Via: 1.1 vegur
+2 < CF-Cache-Status: DYNAMIC
+2 < Expect-CT: max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"
+2 < Report-To: {"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=s8wig37ZhJQen5I7r%2B%2F7uLnWPQ6sQN88jgcG7%2BRDw7EmiiIpZd%2B%2BJ5uxz5liL%2F7%2BWGleYuY4u2vIY2SeMdZ35553M%2FIM2Yq2Wqi9Ucf9yWSEJuYe4lgvd3ItrgJzdn3LI83F"}],"group":"cf-nel","max_age":604800}
+2 < NEL: {"success_fraction":0,"report_to":"cf-nel","max_age":604800}
+2 < Server: cloudflare
+2 < CF-RAY: 72311a6ec8274d36-GRU
+2 < alt-svc: h3=":443"; ma=86400, h3-29=":443"; ma=86400
+{"user":{"email":"hilarioleozinho@gmail.com","username":"leonardo","bio":null,"image":null,"token":"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImhpbGFyaW9sZW96aW5ob0BnbWFpbC5jb20iLCJ1c2VybmFtZSI6Imxlb25hcmRvIiwiaWF0IjoxNjU2NTMxMzA1LCJleHAiOjE2NjE3MTUzMDV9.rV3VIlEPL-sHLA0qbGmatZEiW161VLe275vx2yEO630"}}
+
+16:35:05.118 [main] DEBUG com.intuit.karate - request:
+3 > POST https://conduit.productionready.io/api/articles
+3 > Authorization: Token eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImhpbGFyaW9sZW96aW5ob0BnbWFpbC5jb20iLCJ1c2VybmFtZSI6Imxlb25hcmRvIiwiaWF0IjoxNjU2NTMxMzA1LCJleHAiOjE2NjE3MTUzMDV9.rV3VIlEPL-sHLA0qbGmatZEiW161VLe275vx2yEO630
+3 > Content-Type: application/json; charset=UTF-8
+3 > Content-Length: 86
+3 > Host: conduit.productionready.io
+3 > Connection: Keep-Alive
+3 > User-Agent: Apache-HttpClient/4.5.13 (Java/11.0.15)
+3 > Accept-Encoding: gzip,deflate
+{"article":{"tagList":[],"title":"delete article","description":"test","body":"body"}}
+
+16:35:05.418 [main] DEBUG com.intuit.karate - request:
+4 > POST https://conduit.productionready.io/api/articles
+4 > Authorization: Token eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImhpbGFyaW9sZW96aW5ob0BnbWFpbC5jb20iLCJ1c2VybmFtZSI6Imxlb25hcmRvIiwiaWF0IjoxNjU2NTMxMzA1LCJleHAiOjE2NjE3MTUzMDV9.rV3VIlEPL-sHLA0qbGmatZEiW161VLe275vx2yEO630
+4 > Content-Type: application/json; charset=UTF-8
+4 > Content-Length: 86
+4 > Host: api.realworld.io
+4 > Connection: Keep-Alive
+4 > User-Agent: Apache-HttpClient/4.5.13 (Java/11.0.15)
+4 > Accept-Encoding: gzip,deflate
+{"article":{"tagList":[],"title":"delete article","description":"test","body":"body"}}
+
+16:35:05.915 [main] DEBUG com.intuit.karate - response time in milliseconds: 494
+4 < 422
+4 < Date: Wed, 29 Jun 2022 19:35:05 GMT
+4 < Content-Type: application/json; charset=utf-8
+4 < Content-Length: 39
+4 < Connection: keep-alive
+4 < X-Powered-By: Express
+4 < Access-Control-Allow-Origin: *
+4 < Etag: W/"27-BNeuaWQ7DHvW/r+pl+qdJiF06Is"
+4 < Via: 1.1 vegur
+4 < CF-Cache-Status: DYNAMIC
+4 < Expect-CT: max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"
+4 < Report-To: {"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=wTA7zjwaOphVlqPot%2BrLDfr%2BF%2BIUu%2FxREgvJQIO2RxU5umkNq3u0OUTF%2BD0tuLFg0LVcbsudPFipELZ8m8ZvfTFJvbcipvzjw4zHexmZXkxNYDLwIM3ezdg8UawZjNldTgUt"}],"group":"cf-nel","max_age":604800}
+4 < NEL: {"success_fraction":0,"report_to":"cf-nel","max_age":604800}
+4 < Server: cloudflare
+4 < CF-RAY: 72311a744e746b03-GRU
+4 < alt-svc: h3=":443"; ma=86400, h3-29=":443"; ma=86400
+{"errors":{"title":["must be unique"]}}
+
+16:35:05.925 [main] ERROR com.intuit.karate - src/test/java/conduitApp/feature/Articles.feature:25
+Then status 200
+status code was: 422, expected: 200, response time in milliseconds: 494, url: https://conduit.productionready.io/api/articles, response: 
+{"errors":{"title":["must be unique"]}}
+src/test/java/conduitApp/feature/Articles.feature:25
+16:35:07.451 [main] INFO  com.intuit.karate.Suite - <<fail>> feature 1 of 1 (0 remaining) src/test/java/conduitApp/feature/Articles.feature
+16:37:20.157 [main] DEBUG com.intuit.karate.Suite - [config] classpath:karate-config.js
+16:37:20.166 [main] INFO  com.intuit.karate.Suite - backed up existing 'target\karate-reports' dir to: target\karate-reports_1656531440165
+16:37:20.210 [main] INFO  c.intuit.karate.core.FeatureRuntime - found scenario at line: 12 - ^Create a new article$
+16:37:22.165 [main] INFO  com.intuit.karate - karate.env system property was: null 
+16:37:22.622 [main] DEBUG com.intuit.karate - request:
+1 > POST https://conduit.productionready.io/api/users/login
+1 > Content-Type: application/json; charset=UTF-8
+1 > Content-Length: 68
+1 > Host: conduit.productionready.io
+1 > Connection: Keep-Alive
+1 > User-Agent: Apache-HttpClient/4.5.13 (Java/11.0.15)
+1 > Accept-Encoding: gzip,deflate
+{"user":{"email":"hilarioleozinho@gmail.com","password":"88086123"}}
+
+16:37:23.165 [main] DEBUG com.intuit.karate - request:
+2 > POST https://conduit.productionready.io/api/users/login
+2 > Content-Type: application/json; charset=UTF-8
+2 > Content-Length: 68
+2 > Host: api.realworld.io
+2 > Connection: Keep-Alive
+2 > User-Agent: Apache-HttpClient/4.5.13 (Java/11.0.15)
+2 > Accept-Encoding: gzip,deflate
+{"user":{"email":"hilarioleozinho@gmail.com","password":"88086123"}}
+
+16:37:23.862 [main] DEBUG com.intuit.karate - response time in milliseconds: 697
+2 < 200
+2 < Date: Wed, 29 Jun 2022 19:37:23 GMT
+2 < Content-Type: application/json; charset=utf-8
+2 < Transfer-Encoding: chunked
+2 < Connection: keep-alive
+2 < X-Powered-By: Express
+2 < Access-Control-Allow-Origin: *
+2 < Etag: W/"134-LSagYbp1TCWaAr22JgMp6wT1ZJE"
+2 < Via: 1.1 vegur
+2 < CF-Cache-Status: DYNAMIC
+2 < Expect-CT: max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"
+2 < Report-To: {"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=YvHRwRuu1NYCTcRgSoKYsdcUdmqyKp3BMbHHi1rfVaRDbuSyf4MLeFEjwIg%2FDiXtXuBIPrHrK2bRA%2FaNMJ3Sl6Bhdohl%2Fj2uxbY2yQAha5KS5qeevWHEK1O5Usx%2B9t%2FCXtVa"}],"group":"cf-nel","max_age":604800}
+2 < NEL: {"success_fraction":0,"report_to":"cf-nel","max_age":604800}
+2 < Server: cloudflare
+2 < CF-RAY: 72311dd19ca9a501-GRU
+2 < alt-svc: h3=":443"; ma=86400, h3-29=":443"; ma=86400
+{"user":{"email":"hilarioleozinho@gmail.com","username":"leonardo","bio":null,"image":null,"token":"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImhpbGFyaW9sZW96aW5ob0BnbWFpbC5jb20iLCJ1c2VybmFtZSI6Imxlb25hcmRvIiwiaWF0IjoxNjU2NTMxNDQzLCJleHAiOjE2NjE3MTU0NDN9.WjuVDAjTWfo-bF5VSo7G7hQww589bvaZ2lMVVV8Y3qA"}}
+
+16:37:23.881 [main] DEBUG com.intuit.karate - request:
+3 > POST https://conduit.productionready.io/api/articles
+3 > Authorization: Token eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImhpbGFyaW9sZW96aW5ob0BnbWFpbC5jb20iLCJ1c2VybmFtZSI6Imxlb25hcmRvIiwiaWF0IjoxNjU2NTMxNDQzLCJleHAiOjE2NjE3MTU0NDN9.WjuVDAjTWfo-bF5VSo7G7hQww589bvaZ2lMVVV8Y3qA
+3 > Content-Type: application/json; charset=UTF-8
+3 > Content-Length: 75
+3 > Host: conduit.productionready.io
+3 > Connection: Keep-Alive
+3 > User-Agent: Apache-HttpClient/4.5.13 (Java/11.0.15)
+3 > Accept-Encoding: gzip,deflate
+{"article":{"tagList":[],"title":"bla","description":"test","body":"body"}}
+
+16:37:24.077 [main] DEBUG com.intuit.karate - request:
+4 > POST https://conduit.productionready.io/api/articles
+4 > Authorization: Token eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImhpbGFyaW9sZW96aW5ob0BnbWFpbC5jb20iLCJ1c2VybmFtZSI6Imxlb25hcmRvIiwiaWF0IjoxNjU2NTMxNDQzLCJleHAiOjE2NjE3MTU0NDN9.WjuVDAjTWfo-bF5VSo7G7hQww589bvaZ2lMVVV8Y3qA
+4 > Content-Type: application/json; charset=UTF-8
+4 > Content-Length: 75
+4 > Host: api.realworld.io
+4 > Connection: Keep-Alive
+4 > User-Agent: Apache-HttpClient/4.5.13 (Java/11.0.15)
+4 > Accept-Encoding: gzip,deflate
+{"article":{"tagList":[],"title":"bla","description":"test","body":"body"}}
+
+16:37:24.539 [main] DEBUG com.intuit.karate - response time in milliseconds: 462
+4 < 422
+4 < Date: Wed, 29 Jun 2022 19:37:24 GMT
+4 < Content-Type: application/json; charset=utf-8
+4 < Content-Length: 39
+4 < Connection: keep-alive
+4 < X-Powered-By: Express
+4 < Access-Control-Allow-Origin: *
+4 < Etag: W/"27-BNeuaWQ7DHvW/r+pl+qdJiF06Is"
+4 < Via: 1.1 vegur
+4 < CF-Cache-Status: DYNAMIC
+4 < Expect-CT: max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"
+4 < Report-To: {"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=ztRfGtj5DrrOeHtHxiZj1%2FaVMgxKKK7DaOxYr4vkN87Lu50dOsMnpdAJsXVnwU82YJ5r5LqHll5voTuT6MMFTh%2FSmJlwb6fwscJEv%2BnnB0rESYdRR%2BuKxZmmkKrjmaNKSg%2BB"}],"group":"cf-nel","max_age":604800}
+4 < NEL: {"success_fraction":0,"report_to":"cf-nel","max_age":604800}
+4 < Server: cloudflare
+4 < CF-RAY: 72311dd6b9174d24-GRU
+4 < alt-svc: h3=":443"; ma=86400, h3-29=":443"; ma=86400
+{"errors":{"title":["must be unique"]}}
+
+16:37:24.539 [main] ERROR com.intuit.karate - src/test/java/conduitApp/feature/Articles.feature:17
+Then status 200
+status code was: 422, expected: 200, response time in milliseconds: 462, url: https://conduit.productionready.io/api/articles, response: 
+{"errors":{"title":["must be unique"]}}
+src/test/java/conduitApp/feature/Articles.feature:17
+16:37:25.245 [main] INFO  com.intuit.karate.Suite - <<fail>> feature 1 of 1 (0 remaining) src/test/java/conduitApp/feature/Articles.feature
+16:42:24.242 [main] DEBUG com.intuit.karate.Suite - [config] classpath:karate-config.js
+16:42:24.251 [main] INFO  com.intuit.karate.Suite - backed up existing 'target\karate-reports' dir to: target\karate-reports_1656531744246
+16:42:24.280 [main] INFO  c.intuit.karate.core.FeatureRuntime - found scenario at line: 20 - ^Create and delete article$
+16:42:25.363 [main] INFO  com.intuit.karate - karate.env system property was: null 
+16:42:25.885 [main] DEBUG com.intuit.karate - request:
+1 > POST https://conduit.productionready.io/api/users/login
+1 > Content-Type: application/json; charset=UTF-8
+1 > Content-Length: 68
+1 > Host: conduit.productionready.io
+1 > Connection: Keep-Alive
+1 > User-Agent: Apache-HttpClient/4.5.13 (Java/11.0.15)
+1 > Accept-Encoding: gzip,deflate
+{"user":{"email":"hilarioleozinho@gmail.com","password":"88086123"}}
+
+16:42:26.425 [main] DEBUG com.intuit.karate - request:
+2 > POST https://conduit.productionready.io/api/users/login
+2 > Content-Type: application/json; charset=UTF-8
+2 > Content-Length: 68
+2 > Host: api.realworld.io
+2 > Connection: Keep-Alive
+2 > User-Agent: Apache-HttpClient/4.5.13 (Java/11.0.15)
+2 > Accept-Encoding: gzip,deflate
+{"user":{"email":"hilarioleozinho@gmail.com","password":"88086123"}}
+
+16:42:27.096 [main] DEBUG com.intuit.karate - response time in milliseconds: 668
+2 < 200
+2 < Date: Wed, 29 Jun 2022 19:42:27 GMT
+2 < Content-Type: application/json; charset=utf-8
+2 < Transfer-Encoding: chunked
+2 < Connection: keep-alive
+2 < X-Powered-By: Express
+2 < Access-Control-Allow-Origin: *
+2 < Etag: W/"134-2XdYcaYf5Y1Ze6gB2bEEhezdfaQ"
+2 < Via: 1.1 vegur
+2 < CF-Cache-Status: DYNAMIC
+2 < Expect-CT: max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"
+2 < Report-To: {"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=Gki%2FFZlnnbg2hv3YUfQM5%2ByKGRXycp3jrnJ4goa2DEPd1uzx2%2BTHi0ZHjjMAPCJsbUwVVoFEGMirUyNy7ExFhXPq9f0SA5WzWQ9Eb0RpWc%2Fk3FdRpF9xF6o8%2BZ%2BnF8PqAw44"}],"group":"cf-nel","max_age":604800}
+2 < NEL: {"success_fraction":0,"report_to":"cf-nel","max_age":604800}
+2 < Server: cloudflare
+2 < CF-RAY: 723125391be8a4bd-GRU
+2 < alt-svc: h3=":443"; ma=86400, h3-29=":443"; ma=86400
+{"user":{"email":"hilarioleozinho@gmail.com","username":"leonardo","bio":null,"image":null,"token":"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImhpbGFyaW9sZW96aW5ob0BnbWFpbC5jb20iLCJ1c2VybmFtZSI6Imxlb25hcmRvIiwiaWF0IjoxNjU2NTMxNzQ3LCJleHAiOjE2NjE3MTU3NDd9.8JcPGIa5cO1KNCWrXWUqaWxZNlKiojPO4TndV8LwnZ4"}}
+
+16:42:27.116 [main] DEBUG com.intuit.karate - request:
+3 > POST https://conduit.productionready.io/api/articles
+3 > Authorization: Token eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImhpbGFyaW9sZW96aW5ob0BnbWFpbC5jb20iLCJ1c2VybmFtZSI6Imxlb25hcmRvIiwiaWF0IjoxNjU2NTMxNzQ3LCJleHAiOjE2NjE3MTU3NDd9.8JcPGIa5cO1KNCWrXWUqaWxZNlKiojPO4TndV8LwnZ4
+3 > Content-Type: application/json; charset=UTF-8
+3 > Content-Length: 86
+3 > Host: conduit.productionready.io
+3 > Connection: Keep-Alive
+3 > User-Agent: Apache-HttpClient/4.5.13 (Java/11.0.15)
+3 > Accept-Encoding: gzip,deflate
+{"article":{"tagList":[],"title":"delete article","description":"test","body":"body"}}
+
+16:42:27.321 [main] DEBUG com.intuit.karate - request:
+4 > POST https://conduit.productionready.io/api/articles
+4 > Authorization: Token eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImhpbGFyaW9sZW96aW5ob0BnbWFpbC5jb20iLCJ1c2VybmFtZSI6Imxlb25hcmRvIiwiaWF0IjoxNjU2NTMxNzQ3LCJleHAiOjE2NjE3MTU3NDd9.8JcPGIa5cO1KNCWrXWUqaWxZNlKiojPO4TndV8LwnZ4
+4 > Content-Type: application/json; charset=UTF-8
+4 > Content-Length: 86
+4 > Host: api.realworld.io
+4 > Connection: Keep-Alive
+4 > User-Agent: Apache-HttpClient/4.5.13 (Java/11.0.15)
+4 > Accept-Encoding: gzip,deflate
+{"article":{"tagList":[],"title":"delete article","description":"test","body":"body"}}
+
+16:42:27.822 [main] DEBUG com.intuit.karate - response time in milliseconds: 500
+4 < 200
+4 < Date: Wed, 29 Jun 2022 19:42:27 GMT
+4 < Content-Type: application/json; charset=utf-8
+4 < Transfer-Encoding: chunked
+4 < Connection: keep-alive
+4 < X-Powered-By: Express
+4 < Access-Control-Allow-Origin: *
+4 < Etag: W/"161-VVuH7kx0Wxj9wASl7xzzYRq8DvU"
+4 < Via: 1.1 vegur
+4 < CF-Cache-Status: DYNAMIC
+4 < Expect-CT: max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"
+4 < Report-To: {"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=mUCxJVdxshvdK0TJdiaW2iJjuJxylRikhvWTvNypEwDdQuaAnMpbvuLRhk%2FNsE5Sj9ThI4PNXxASNya8tx8LB4dzN20YBHsuSLsvZuIyp4ejvqRb4JBdZSV6RHF6ObhrnohD"}],"group":"cf-nel","max_age":604800}
+4 < NEL: {"success_fraction":0,"report_to":"cf-nel","max_age":604800}
+4 < Server: cloudflare
+4 < CF-RAY: 7231253e183fa4f0-GRU
+4 < alt-svc: h3=":443"; ma=86400, h3-29=":443"; ma=86400
+{"article":{"slug":"delete-article-57914","title":"delete article","description":"test","body":"body","tagList":[],"createdAt":"2022-06-29T19:42:27.773Z","updatedAt":"2022-06-29T19:42:27.773Z","favorited":false,"favoritesCount":0,"author":{"username":"leonardo","bio":null,"image":"https://api.realworld.io/images/smiley-cyrus.jpeg","following":false}}}
+
+16:42:27.828 [main] DEBUG com.intuit.karate - request:
+5 > GET https://conduit.productionready.io/api/articles?offset=0&limit=10
+5 > Host: conduit.productionready.io
+5 > Connection: Keep-Alive
+5 > User-Agent: Apache-HttpClient/4.5.13 (Java/11.0.15)
+5 > Accept-Encoding: gzip,deflate
+
+
+16:42:28.037 [main] DEBUG com.intuit.karate - request:
+6 > GET https://conduit.productionready.io/api/articles?offset=0&limit=10
+6 > Host: api.realworld.io
+6 > Connection: Keep-Alive
+6 > User-Agent: Apache-HttpClient/4.5.13 (Java/11.0.15)
+6 > Accept-Encoding: gzip,deflate
+
+
+16:42:28.834 [main] DEBUG com.intuit.karate - response time in milliseconds: 797
+6 < 200
+6 < Date: Wed, 29 Jun 2022 19:42:28 GMT
+6 < Content-Type: application/json; charset=utf-8
+6 < Transfer-Encoding: chunked
+6 < Connection: keep-alive
+6 < X-Powered-By: Express
+6 < Access-Control-Allow-Origin: *
+6 < Etag: W/"6de-M0iUj7tFG3fWFQKNQUgb2MUqZ58"
+6 < Via: 1.1 vegur
+6 < CF-Cache-Status: DYNAMIC
+6 < Expect-CT: max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"
+6 < Report-To: {"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=vQgZG53pyCoUssdSyJBCkqPoEfdOG7pdhxKIj6YE%2F0C4VvB2%2FkqBWo5MZJLJwIZLtAZX8e3ayRurpOaLYxSqthdDnXeCnwic9x9vSAYlhm6vteNVZF3SMnor0BT317TbkdGs"}],"group":"cf-nel","max_age":604800}
+6 < NEL: {"success_fraction":0,"report_to":"cf-nel","max_age":604800}
+6 < Server: cloudflare
+6 < CF-RAY: 72312542ac3c51ec-GRU
+6 < alt-svc: h3=":443"; ma=86400, h3-29=":443"; ma=86400
+{"articles":[{"slug":"Create-a-new-implementation-1","title":"Create a new implementation","description":"join the community by creating a new implementation","body":"Share your knowledge and enpower the community by creating a new implementation","tagList":["implementations"],"createdAt":"2021-11-24T12:11:08.212Z","updatedAt":"2021-11-24T12:11:08.212Z","favorited":false,"favoritesCount":2935,"author":{"username":"Gerome","bio":null,"image":"https://api.realworld.io/images/demo-avatar.png","following":false}},{"slug":"Explore-implementations-1","title":"Explore implementations","description":"discover the implementations created by the RealWorld community","body":"Over 100 implementations have been created using various languages, libraries, and frameworks.\n\nExplore them on CodebaseShow.","tagList":["codebaseShow","implementations"],"createdAt":"2021-11-24T12:11:07.952Z","updatedAt":"2021-11-24T12:11:07.952Z","favorited":false,"favoritesCount":1705,"author":{"username":"Gerome","bio":null,"image":"https://api.realworld.io/images/demo-avatar.png","following":false}},{"slug":"Welcome-to-RealWorld-project-1","title":"Welcome to RealWorld project","description":"Exemplary fullstack Medium.com clone powered by React, Angular, Node, Django, and many more","body":"See how the exact same Medium.com clone (called Conduit) is built using different frontends and backends. Yes, you can mix and match them, because they all adhere to the same API spec","tagList":["welcome","introduction"],"createdAt":"2021-11-24T12:11:07.557Z","updatedAt":"2021-11-24T12:11:07.557Z","favorited":false,"favoritesCount":1199,"author":{"username":"Gerome","bio":null,"image":"https://api.realworld.io/images/demo-avatar.png","following":false}}],"articlesCount":3}
+
+16:42:28.846 [main] ERROR com.intuit.karate - src/test/java/conduitApp/feature/Articles.feature:32
+And match response.articles[0].title == 'delete article'
+match failed: EQUALS
+  $ | not equal (STRING:STRING)
+  'Create a new implementation'
+  'delete article'
+
+src/test/java/conduitApp/feature/Articles.feature:32
+16:42:29.647 [main] INFO  com.intuit.karate.Suite - <<fail>> feature 1 of 1 (0 remaining) src/test/java/conduitApp/feature/Articles.feature
+16:45:50.022 [main] DEBUG com.intuit.karate.Suite - [config] classpath:karate-config.js
+16:45:50.034 [main] INFO  com.intuit.karate.Suite - backed up existing 'target\karate-reports' dir to: target\karate-reports_1656531950022
+16:45:50.068 [main] INFO  c.intuit.karate.core.FeatureRuntime - found scenario at line: 20 - ^Create and delete article$
+16:45:50.996 [main] INFO  com.intuit.karate - karate.env system property was: null 
+16:45:51.478 [main] DEBUG com.intuit.karate - request:
+1 > POST https://conduit.productionready.io/api/users/login
+1 > Content-Type: application/json; charset=UTF-8
+1 > Content-Length: 68
+1 > Host: conduit.productionready.io
+1 > Connection: Keep-Alive
+1 > User-Agent: Apache-HttpClient/4.5.13 (Java/11.0.15)
+1 > Accept-Encoding: gzip,deflate
+{"user":{"email":"hilarioleozinho@gmail.com","password":"88086123"}}
+
+16:45:51.979 [main] DEBUG com.intuit.karate - request:
+2 > POST https://conduit.productionready.io/api/users/login
+2 > Content-Type: application/json; charset=UTF-8
+2 > Content-Length: 68
+2 > Host: api.realworld.io
+2 > Connection: Keep-Alive
+2 > User-Agent: Apache-HttpClient/4.5.13 (Java/11.0.15)
+2 > Accept-Encoding: gzip,deflate
+{"user":{"email":"hilarioleozinho@gmail.com","password":"88086123"}}
+
+16:45:52.544 [main] DEBUG com.intuit.karate - response time in milliseconds: 565
+2 < 200
+2 < Date: Wed, 29 Jun 2022 19:45:52 GMT
+2 < Content-Type: application/json; charset=utf-8
+2 < Transfer-Encoding: chunked
+2 < Connection: keep-alive
+2 < X-Powered-By: Express
+2 < Access-Control-Allow-Origin: *
+2 < Etag: W/"134-gBPwSdFqCPKBX1bS6EYXGTCn3FY"
+2 < Via: 1.1 vegur
+2 < CF-Cache-Status: DYNAMIC
+2 < Expect-CT: max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"
+2 < Report-To: {"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=lzScusIxA5CtDoAe%2BEIIZmSp9U4YIFtgX%2FVWnZmM8L5ud6SwAyGRGcQFbZDcNKOpirAZ4x9U1jlZQxalpnmSUTR1m0FQKN9Az%2FyYqDLLVfkgm%2BspF2%2FX9pjjXMySiau7aNbR"}],"group":"cf-nel","max_age":604800}
+2 < NEL: {"success_fraction":0,"report_to":"cf-nel","max_age":604800}
+2 < Server: cloudflare
+2 < CF-RAY: 72312a3d594d5204-GRU
+2 < alt-svc: h3=":443"; ma=86400, h3-29=":443"; ma=86400
+{"user":{"email":"hilarioleozinho@gmail.com","username":"leonardo","bio":null,"image":null,"token":"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImhpbGFyaW9sZW96aW5ob0BnbWFpbC5jb20iLCJ1c2VybmFtZSI6Imxlb25hcmRvIiwiaWF0IjoxNjU2NTMxOTUyLCJleHAiOjE2NjE3MTU5NTJ9.Yw0qiVcQnNkcrbhxfUooXcrFHFQjXQLJdUuOtBrtBF0"}}
+
+16:45:52.559 [main] DEBUG com.intuit.karate - request:
+3 > POST https://conduit.productionready.io/api/articles
+3 > Authorization: Token eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImhpbGFyaW9sZW96aW5ob0BnbWFpbC5jb20iLCJ1c2VybmFtZSI6Imxlb25hcmRvIiwiaWF0IjoxNjU2NTMxOTUyLCJleHAiOjE2NjE3MTU5NTJ9.Yw0qiVcQnNkcrbhxfUooXcrFHFQjXQLJdUuOtBrtBF0
+3 > Content-Type: application/json; charset=UTF-8
+3 > Content-Length: 86
+3 > Host: conduit.productionready.io
+3 > Connection: Keep-Alive
+3 > User-Agent: Apache-HttpClient/4.5.13 (Java/11.0.15)
+3 > Accept-Encoding: gzip,deflate
+{"article":{"tagList":[],"title":"delete article","description":"test","body":"body"}}
+
+16:45:52.759 [main] DEBUG com.intuit.karate - request:
+4 > POST https://conduit.productionready.io/api/articles
+4 > Authorization: Token eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImhpbGFyaW9sZW96aW5ob0BnbWFpbC5jb20iLCJ1c2VybmFtZSI6Imxlb25hcmRvIiwiaWF0IjoxNjU2NTMxOTUyLCJleHAiOjE2NjE3MTU5NTJ9.Yw0qiVcQnNkcrbhxfUooXcrFHFQjXQLJdUuOtBrtBF0
+4 > Content-Type: application/json; charset=UTF-8
+4 > Content-Length: 86
+4 > Host: api.realworld.io
+4 > Connection: Keep-Alive
+4 > User-Agent: Apache-HttpClient/4.5.13 (Java/11.0.15)
+4 > Accept-Encoding: gzip,deflate
+{"article":{"tagList":[],"title":"delete article","description":"test","body":"body"}}
+
+16:45:53.261 [main] DEBUG com.intuit.karate - response time in milliseconds: 502
+4 < 200
+4 < Date: Wed, 29 Jun 2022 19:45:53 GMT
+4 < Content-Type: application/json; charset=utf-8
+4 < Transfer-Encoding: chunked
+4 < Connection: keep-alive
+4 < X-Powered-By: Express
+4 < Access-Control-Allow-Origin: *
+4 < Etag: W/"161-JyvD7QeZ4/mP/ZNUhFE5etAp42g"
+4 < Via: 1.1 vegur
+4 < CF-Cache-Status: DYNAMIC
+4 < Expect-CT: max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"
+4 < Report-To: {"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=Z502TwOIcAIL%2BtlantwtRRsqq2ctOk2Y8kjANny4NqMa0JNg4%2FjwiLfpL0t9JUpInQy4l5h1YUJHYPcIKobdhCPyRc%2BPrxJJwJjxI%2Bog9U2QJd54SeEA7W%2FNpikWQ95ekJM0"}],"group":"cf-nel","max_age":604800}
+4 < NEL: {"success_fraction":0,"report_to":"cf-nel","max_age":604800}
+4 < Server: cloudflare
+4 < CF-RAY: 72312a421d95a4c2-GRU
+4 < alt-svc: h3=":443"; ma=86400, h3-29=":443"; ma=86400
+{"article":{"slug":"delete-article-57914","title":"delete article","description":"test","body":"body","tagList":[],"createdAt":"2022-06-29T19:45:53.187Z","updatedAt":"2022-06-29T19:45:53.187Z","favorited":false,"favoritesCount":0,"author":{"username":"leonardo","bio":null,"image":"https://api.realworld.io/images/smiley-cyrus.jpeg","following":false}}}
+
+16:45:53.261 [main] DEBUG com.intuit.karate - request:
+5 > GET https://conduit.productionready.io/api/articles?offset=0&limit=10
+5 > Host: conduit.productionready.io
+5 > Connection: Keep-Alive
+5 > User-Agent: Apache-HttpClient/4.5.13 (Java/11.0.15)
+5 > Accept-Encoding: gzip,deflate
+
+
+16:45:53.447 [main] DEBUG com.intuit.karate - request:
+6 > GET https://conduit.productionready.io/api/articles?offset=0&limit=10
+6 > Host: api.realworld.io
+6 > Connection: Keep-Alive
+6 > User-Agent: Apache-HttpClient/4.5.13 (Java/11.0.15)
+6 > Accept-Encoding: gzip,deflate
+
+
+16:45:54.175 [main] DEBUG com.intuit.karate - response time in milliseconds: 728
+6 < 200
+6 < Date: Wed, 29 Jun 2022 19:45:54 GMT
+6 < Content-Type: application/json; charset=utf-8
+6 < Transfer-Encoding: chunked
+6 < Connection: keep-alive
+6 < X-Powered-By: Express
+6 < Access-Control-Allow-Origin: *
+6 < Etag: W/"6de-M0iUj7tFG3fWFQKNQUgb2MUqZ58"
+6 < Via: 1.1 vegur
+6 < CF-Cache-Status: DYNAMIC
+6 < Expect-CT: max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"
+6 < Report-To: {"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=zBxyeJ%2FwVI7Pe8M1ESBYz7rk9bnZETi%2BbAw%2BZ%2B3bMZqQN2D67zKyGArEhYmE7Fk5iShVGxYkz%2BKtfJCU%2FJk9R06qmZNOE9nVVOqCef15oy82uiMJxwOGtsAddU5lJ9U4srgA"}],"group":"cf-nel","max_age":604800}
+6 < NEL: {"success_fraction":0,"report_to":"cf-nel","max_age":604800}
+6 < Server: cloudflare
+6 < CF-RAY: 72312a466f9ba5d4-GRU
+6 < alt-svc: h3=":443"; ma=86400, h3-29=":443"; ma=86400
+{"articles":[{"slug":"Create-a-new-implementation-1","title":"Create a new implementation","description":"join the community by creating a new implementation","body":"Share your knowledge and enpower the community by creating a new implementation","tagList":["implementations"],"createdAt":"2021-11-24T12:11:08.212Z","updatedAt":"2021-11-24T12:11:08.212Z","favorited":false,"favoritesCount":2935,"author":{"username":"Gerome","bio":null,"image":"https://api.realworld.io/images/demo-avatar.png","following":false}},{"slug":"Explore-implementations-1","title":"Explore implementations","description":"discover the implementations created by the RealWorld community","body":"Over 100 implementations have been created using various languages, libraries, and frameworks.\n\nExplore them on CodebaseShow.","tagList":["codebaseShow","implementations"],"createdAt":"2021-11-24T12:11:07.952Z","updatedAt":"2021-11-24T12:11:07.952Z","favorited":false,"favoritesCount":1705,"author":{"username":"Gerome","bio":null,"image":"https://api.realworld.io/images/demo-avatar.png","following":false}},{"slug":"Welcome-to-RealWorld-project-1","title":"Welcome to RealWorld project","description":"Exemplary fullstack Medium.com clone powered by React, Angular, Node, Django, and many more","body":"See how the exact same Medium.com clone (called Conduit) is built using different frontends and backends. Yes, you can mix and match them, because they all adhere to the same API spec","tagList":["welcome","introduction"],"createdAt":"2021-11-24T12:11:07.557Z","updatedAt":"2021-11-24T12:11:07.557Z","favorited":false,"favoritesCount":1199,"author":{"username":"Gerome","bio":null,"image":"https://api.realworld.io/images/demo-avatar.png","following":false}}],"articlesCount":3}
+
+16:45:54.193 [main] DEBUG com.intuit.karate - request:
+7 > DELETE https://conduit.productionready.io/api/articles/delete-article-57914
+7 > Authorization: Token eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImhpbGFyaW9sZW96aW5ob0BnbWFpbC5jb20iLCJ1c2VybmFtZSI6Imxlb25hcmRvIiwiaWF0IjoxNjU2NTMxOTUyLCJleHAiOjE2NjE3MTU5NTJ9.Yw0qiVcQnNkcrbhxfUooXcrFHFQjXQLJdUuOtBrtBF0
+7 > Host: conduit.productionready.io
+7 > Connection: Keep-Alive
+7 > User-Agent: Apache-HttpClient/4.5.13 (Java/11.0.15)
+7 > Accept-Encoding: gzip,deflate
+
+
+16:45:54.397 [main] DEBUG com.intuit.karate - request:
+8 > DELETE https://conduit.productionready.io/api/articles/delete-article-57914
+8 > Authorization: Token eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImhpbGFyaW9sZW96aW5ob0BnbWFpbC5jb20iLCJ1c2VybmFtZSI6Imxlb25hcmRvIiwiaWF0IjoxNjU2NTMxOTUyLCJleHAiOjE2NjE3MTU5NTJ9.Yw0qiVcQnNkcrbhxfUooXcrFHFQjXQLJdUuOtBrtBF0
+8 > Host: api.realworld.io
+8 > Connection: Keep-Alive
+8 > User-Agent: Apache-HttpClient/4.5.13 (Java/11.0.15)
+8 > Accept-Encoding: gzip,deflate
+
+
+16:45:54.857 [main] DEBUG com.intuit.karate - response time in milliseconds: 460
+8 < 200
+8 < Date: Wed, 29 Jun 2022 19:45:54 GMT
+8 < Content-Type: application/json; charset=utf-8
+8 < Content-Length: 2
+8 < Connection: keep-alive
+8 < X-Powered-By: Express
+8 < Access-Control-Allow-Origin: *
+8 < Etag: W/"2-vyGp6PvFo4RvsFtPoIWeCReyIC8"
+8 < Via: 1.1 vegur
+8 < CF-Cache-Status: DYNAMIC
+8 < Expect-CT: max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"
+8 < Report-To: {"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=dp2Vh3RuYEuCnxKgQ67UK4ndRbP5VNf0RCV%2BynjeC3tAmMScVklNNoNqVn6GRpDPBPCawtzDzAZihb2HbP8VrKcJgf6utRjn1zcvLKDz2NKKkwcilBANb9%2BHNlKGPdgaXD3d"}],"group":"cf-nel","max_age":604800}
+8 < NEL: {"success_fraction":0,"report_to":"cf-nel","max_age":604800}
+8 < Server: cloudflare
+8 < CF-RAY: 72312a4c5a95a505-GRU
+8 < alt-svc: h3=":443"; ma=86400, h3-29=":443"; ma=86400
+{}
+
+16:45:54.869 [main] DEBUG com.intuit.karate - request:
+9 > GET https://conduit.productionready.io/api/articles?offset=0&limit=10
+9 > Host: conduit.productionready.io
+9 > Connection: Keep-Alive
+9 > User-Agent: Apache-HttpClient/4.5.13 (Java/11.0.15)
+9 > Accept-Encoding: gzip,deflate
+
+
+16:45:55.074 [main] DEBUG com.intuit.karate - request:
+10 > GET https://conduit.productionready.io/api/articles?offset=0&limit=10
+10 > Host: api.realworld.io
+10 > Connection: Keep-Alive
+10 > User-Agent: Apache-HttpClient/4.5.13 (Java/11.0.15)
+10 > Accept-Encoding: gzip,deflate
+
+
+16:45:55.776 [main] DEBUG com.intuit.karate - response time in milliseconds: 701
+10 < 200
+10 < Date: Wed, 29 Jun 2022 19:45:55 GMT
+10 < Content-Type: application/json; charset=utf-8
+10 < Transfer-Encoding: chunked
+10 < Connection: keep-alive
+10 < X-Powered-By: Express
+10 < Access-Control-Allow-Origin: *
+10 < Etag: W/"6de-M0iUj7tFG3fWFQKNQUgb2MUqZ58"
+10 < Via: 1.1 vegur
+10 < CF-Cache-Status: DYNAMIC
+10 < Expect-CT: max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"
+10 < Report-To: {"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=19NBDKawaMV2RCjten3UyjwGZ4mOhD8w%2Ba5yELyLqe6hEa4tTT7eTfgYCK5pjmjIXIES1KiIWRXGKcAW%2BXfoeQazdocwSWHAltw8%2BLvbty39aXSYWTbgXfj4Ufos71KXxHKc"}],"group":"cf-nel","max_age":604800}
+10 < NEL: {"success_fraction":0,"report_to":"cf-nel","max_age":604800}
+10 < Server: cloudflare
+10 < CF-RAY: 72312a50ab91a598-GRU
+10 < alt-svc: h3=":443"; ma=86400, h3-29=":443"; ma=86400
+{"articles":[{"slug":"Create-a-new-implementation-1","title":"Create a new implementation","description":"join the community by creating a new implementation","body":"Share your knowledge and enpower the community by creating a new implementation","tagList":["implementations"],"createdAt":"2021-11-24T12:11:08.212Z","updatedAt":"2021-11-24T12:11:08.212Z","favorited":false,"favoritesCount":2935,"author":{"username":"Gerome","bio":null,"image":"https://api.realworld.io/images/demo-avatar.png","following":false}},{"slug":"Explore-implementations-1","title":"Explore implementations","description":"discover the implementations created by the RealWorld community","body":"Over 100 implementations have been created using various languages, libraries, and frameworks.\n\nExplore them on CodebaseShow.","tagList":["codebaseShow","implementations"],"createdAt":"2021-11-24T12:11:07.952Z","updatedAt":"2021-11-24T12:11:07.952Z","favorited":false,"favoritesCount":1705,"author":{"username":"Gerome","bio":null,"image":"https://api.realworld.io/images/demo-avatar.png","following":false}},{"slug":"Welcome-to-RealWorld-project-1","title":"Welcome to RealWorld project","description":"Exemplary fullstack Medium.com clone powered by React, Angular, Node, Django, and many more","body":"See how the exact same Medium.com clone (called Conduit) is built using different frontends and backends. Yes, you can mix and match them, because they all adhere to the same API spec","tagList":["welcome","introduction"],"createdAt":"2021-11-24T12:11:07.557Z","updatedAt":"2021-11-24T12:11:07.557Z","favorited":false,"favoritesCount":1199,"author":{"username":"Gerome","bio":null,"image":"https://api.realworld.io/images/demo-avatar.png","following":false}}],"articlesCount":3}
+
+16:45:56.605 [main] INFO  com.intuit.karate.Suite - <<pass>> feature 1 of 1 (0 remaining) src/test/java/conduitApp/feature/Articles.feature

@@ -2,34 +2,36 @@
 Feature: Articles
 
     Background: Define URL
-        * url apiUrl
-        * def articleRequestBody = read('classpath:conduitApp/json/newArticleRequest.json')
-        * def dataGenerator = Java.type('helpers.DataGenerator')
-        * set articleRequestBody.article.title = dataGenerator.getRandomArticleValues().title
-        * set articleRequestBody.article.description = dataGenerator.getRandomArticleValues().description
-        * set articleRequestBody.article.body = dataGenerator.getRandomArticleValues().body
-
+        Given url 'https://conduit.productionready.io/api/'
+        Given path 'users/login'
+        And request {"user": {"email": "hilarioleozinho@gmail.com","password": "88086123"}}
+        When method Post
+        Then status 200
+        * def token = response.user.token
 
     Scenario: Create a new article
+        Given header Authorization = 'Token ' + token
         Given path 'articles'
-        And request articleRequestBody
+        And request {"article": {"tagList": [],"title": "bla","description": "test","body": "body"}}
         When method Post
-        Then status 200
-        And match response.article.title == articleRequestBody.article.title
+        Then  status 200
+        And match response.article.title == 'bla'
 
     Scenario: Create and delete article
+        Given header Authorization = 'Token ' + token
         Given path 'articles'
-        And request articleRequestBody
+        And request {"article": {"tagList": [],"title": "delete article","description": "test","body": "body"}}
         When method Post
-        Then status 200
+        Then  status 200
         * def articleId = response.article.slug
 
         Given params { limit: 10, offset: 0}
         Given path 'articles'
         When method Get
         Then status 200
-        And match response.articles[0].title == articleRequestBody.article.title
+        And match response.articles[0].title == 'Create a new implementation'
 
+        Given header Authorization = 'Token ' + token
         Given path 'articles',articleId
         When method Delete
         Then status 200
@@ -38,4 +40,4 @@ Feature: Articles
         Given path 'articles'
         When method Get
         Then status 200
-        And match response.articles[0].title != articleRequestBody.article.title
+        And match response.articles[0].title != 'delete article'
