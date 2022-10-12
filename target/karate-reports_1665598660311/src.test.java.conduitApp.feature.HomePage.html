@@ -1,0 +1,906 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"/>
+    <link rel="stylesheet" href="res/bootstrap.min.css" type="text/css"/>
+    <link rel="stylesheet" href="res/karate-report.css" type="text/css"/>
+    <link rel="shortcut icon" href="favicon.ico"/>
+    <script type="text/javascript" src="res/jquery.min.js"></script>
+    <script type="text/javascript" src="res/jquery.tablesorter.min.js"></script>
+    <script type="text/javascript" src="res/bootstrap.min.js"></script>
+    <script type="text/javascript" src="res/karate-report.js"></script>
+    <script>
+!function(t,e){var o,n,p,r;e.__SV||(window.posthog=e,e._i=[],e.init=function(i,s,a){function g(t,e){var o=e.split(".");2==o.length&&(t=t[o[0]],e=o[1]),t[e]=function(){t.push([e].concat(Array.prototype.slice.call(arguments,0)))}}(p=t.createElement("script")).type="text/javascript",p.async=!0,p.src=s.api_host+"/static/array.js",(r=t.getElementsByTagName("script")[0]).parentNode.insertBefore(p,r);var u=e;for(void 0!==a?u=e[a]=[]:a="posthog",u.people=u.people||[],u.toString=function(t){var e="posthog";return"posthog"!==a&&(e+="."+a),t||(e+=" (stub)"),e},u.people.toString=function(){return u.toString(1)+".people (stub)"},o="capture identify alias people.set people.set_once set_config register register_once unregister opt_out_capturing has_opted_out_capturing opt_in_capturing reset isFeatureEnabled onFeatureFlags".split(" "),n=0;n<o.length;n++)g(u,o[n]);e._i.push([i,s,a])},e.__SV=1)}(document,window.posthog||[]);
+posthog.init('phc_M6fKk3dSX9HjglkqPSybauGas45NINb7EgsPGU8N9g1',{
+  api_host:'https://app.posthog.com',
+  persistence:'localStorage',
+  autocapture:false,
+  capture_pageview:false,
+  api_transport:'sendBeacon',
+  loaded: function(posthog) { 
+    posthog.identify("70169947-ceba-47b0-b164-ffac5e0b0d82",{name:"hilar"});
+    posthog.capture("report_feature",{karate_version:"1.2.0",karate_meta:null});
+  }
+});
+</script>
+  
+    <title>src.test.java.conduitApp.feature.HomePage</title>  
+  </head>
+  <body>   
+    <div id="root-container">
+      <div id="leftnav">
+                
+        <div>
+  <div class="nav-logo">
+    <a href="https://karatelabs.io">
+      <img src="karate-labs-logo-ring.svg" alt="Karate Labs"/>
+    </a>
+    <div class="nav-count">
+      <div id="nav-pass" class="bg-success">0</div>
+      <div id="nav-fail" class="bg-danger">1</div>
+    </div>
+  </div>
+  <div id="nav-type">
+    <div>Scenarios</div>
+  </div>         
+  <div id="nav-date">
+    <div>2022-10-12 03:15:43 PM</div>
+  </div>        
+</div>
+
+        <div class="nav-container">
+          <div class="nav-item failed">
+            <a href="#[1:8]"><span>[1:8]</span> <span>Get all tags</span></a>
+          </div>
+        </div>
+      </div>
+      <div id="content">
+        <div class="page-heading alert alert-primary">
+          <a href="karate-summary.html">Summary</a><span class="feature-label">|</span>
+          <a href="karate-tags.html">Tags</a><span class="feature-label">|</span>
+          <span class="feature-label">Feature:</span>
+          <span class="feature-path">src/test/java/conduitApp/feature/HomePage.feature</span><span class="feature-label">|</span>
+          <span class="feature-name">Tests for the home page</span>
+          <span class="feature-description"></span>
+        </div>
+        <div class="scenario">
+          <div class="scenario-heading" id="[1:8]">
+            <div class="heading-container">
+              <div class="scenario-tags">
+                
+              </div>
+              <div class="scenario-keyword">
+                Scenario: <span>[1:8]</span>
+                <span class="scenario-name">Get all tags</span>
+                <span></span>
+              </div>
+            </div>
+            <div class="scenario-time failed">
+              <span>ms:</span>&nbsp;<span>0</span>
+            </div>
+          </div>
+          <div class="step-row">
+            <div class="step-container" id="[1:8]bg">
+              <div class="step-ref bg-step">&gt;&gt;</div>
+              <div class="step-cell passed">Background:</div>
+            </div>
+            <div class="time-cell passed"></div>
+          </div>
+          <div data-parent="[1:8]bg"><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.5">
+      <div class="step-ref bg-step">5</div>
+      
+      <div class="step-cell failed">
+        <span>Given</span>&nbsp;<span>url apiUrl</span>
+      </div>
+    </div>
+    <div class="time-cell failed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+  <div class="preformatted" data-parent="0.5">15:15:43.344 karate.env system property was: null 
+15:15:43.354 &gt;&gt; lock acquired, begin callSingle: classpath:helpers/CreateToken.feature
+15:15:43.400 callSingle() will cache an exception
+15:15:43.401 &lt;&lt; lock released, cached callSingle: classpath:helpers/CreateToken.feature
+15:15:43.401 callSingle() cached result is an exception
+15:15:43.422 src/test/java/conduitApp/feature/HomePage.feature:5
+Given url apiUrl
+&gt;&gt; src/test/java/conduitApp/feature/HomePage.feature:8
+&gt;&gt; karate-config.js failed
+&gt;&gt; js failed:
+&gt;&gt;&gt;&gt;
+01: function fn() {
+02:   var env = karate.env; // get system property &#39;karate.env&#39;
+03:   karate.log(&#39;karate.env system property was:&#39;, env);
+04:   if (!env) {
+05:     env = &#39;dev&#39;;
+06:   }
+07:   var config = {
+08: 	  apiUrl: &#39;https://conduit.productionready.io/api/&#39;
+09:   }
+10: 
+11:   if (env == &#39;dev&#39;) {
+12:     config.userEmail = &#39;hilarioleozinho@gmail.com&#39;
+13:     config.userPassword = &#39;88086123&#39;
+14:   }
+15:   if (env == &#39;qa&#39;) {
+16:     config.userEmail = &#39;karate2@test.com&#39;
+17:     config.userPassword = &#39;Karate456&#39;
+18:   }
+19: 
+20:   var accessToken = karate.callSingle(&#39;classpath:helpers/CreateToken.feature&#39;, config).authToken
+21:   karate.configure(&#39;headers&#39;, {Authorization: &#39;Token &#39; + accessToken})
+22: 
+23:   return config;
+24: }
+&lt;&lt;&lt;&lt;
+org.graalvm.polyglot.PolyglotException
+- com.intuit.karate.core.ScenarioBridge.callSingle(ScenarioBridge.java:246)
+- &lt;js&gt;.fn(Unnamed:20)
+
+js failed:
+&gt;&gt;&gt;&gt;
+01: function fn() {
+02:   var env = karate.env; // get system property &#39;karate.env&#39;
+03:   karate.log(&#39;karate.env system property was:&#39;, env);
+04:   if (!env) {
+05:     env = &#39;dev&#39;;
+06:   }
+07:   var config = {
+08: 	  apiUrl: &#39;https://conduit.productionready.io/api/&#39;
+09:   }
+10: 
+11:   if (env == &#39;dev&#39;) {
+12:     config.userEmail = &#39;hilarioleozinho@gmail.com&#39;
+13:     config.userPassword = &#39;88086123&#39;
+14:   }
+15:   if (env == &#39;qa&#39;) {
+16:     config.userEmail = &#39;karate2@test.com&#39;
+17:     config.userPassword = &#39;Karate456&#39;
+18:   }
+19: 
+20:   var accessToken = karate.callSingle(&#39;classpath:helpers/CreateToken.feature&#39;, config).authToken
+21:   karate.configure(&#39;headers&#39;, {Authorization: &#39;Token &#39; + accessToken})
+22: 
+23:   return config;
+24: }
+&lt;&lt;&lt;&lt;
+com.intuit.karate.KarateException: js failed:
+&gt;&gt;&gt;&gt;
+01: function fn() {
+02:   var env = karate.env; // get system property &#39;karate.env&#39;
+03:   karate.log(&#39;karate.env system property was:&#39;, env);
+04:   if (!env) {
+05:     env = &#39;dev&#39;;
+06:   }
+07:   var config = {
+08: 	  apiUrl: &#39;https://conduit.productionready.io/api/&#39;
+09:   }
+10: 
+11:   if (env == &#39;dev&#39;) {
+12:     config.userEmail = &#39;hilarioleozinho@gmail.com&#39;
+13:     config.userPassword = &#39;88086123&#39;
+14:   }
+15:   if (env == &#39;qa&#39;) {
+16:     config.userEmail = &#39;karate2@test.com&#39;
+17:     config.userPassword = &#39;Karate456&#39;
+18:   }
+19: 
+20:   var accessToken = karate.callSingle(&#39;classpath:helpers/CreateToken.feature&#39;, config).authToken
+21:   karate.configure(&#39;headers&#39;, {Authorization: &#39;Token &#39; + accessToken})
+22: 
+23:   return config;
+24: }
+&lt;&lt;&lt;&lt;
+org.graalvm.polyglot.PolyglotException
+- com.intuit.karate.core.ScenarioBridge.callSingle(ScenarioBridge.java:246)
+- &lt;js&gt;.fn(Unnamed:20)
+
+- com.intuit.karate.graal.JsEngine.fromJsEvalException(JsEngine.java:233)
+- com.intuit.karate.core.ScenarioEngine.executeJsValue(ScenarioEngine.java:1336)
+- com.intuit.karate.core.ScenarioEngine.executeFunction(ScenarioEngine.java:1319)
+- com.intuit.karate.core.ScenarioEngine.getOrEvalAsMap(ScenarioEngine.java:1308)
+- com.intuit.karate.core.ScenarioRuntime.evalConfigJs(ScenarioRuntime.java:318)
+- com.intuit.karate.core.ScenarioRuntime.beforeRun(ScenarioRuntime.java:398)
+- com.intuit.karate.core.ScenarioRuntime.run(ScenarioRuntime.java:430)
+
+src/test/java/conduitApp/feature/HomePage.feature:5
+</div>   
+
+  <div>
+        
+    <div class="step-row">
+      <div class="step-container" id="0.5.0.call">
+        <div class="step-ref bg-step">&gt;&gt;</div>
+        <div class="step-indent"></div>
+        <div class="step-cell passed">helpers.CreateToken</div>
+      </div>
+      <div class="time-cell passed">0</div>
+    </div>
+        
+  </div>
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.9">
+      <div class="step-ref failed">9</div>
+      
+      <div class="step-cell failed">
+        <span>Given</span>&nbsp;<span>path &#39;tags&#39;</span>
+      </div>
+    </div>
+    <div class="time-cell failed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+  <div class="preformatted" data-parent="0.9">15:15:43.422 src/test/java/conduitApp/feature/HomePage.feature:9
+Given path &#39;tags&#39;
+&gt;&gt; src/test/java/conduitApp/feature/HomePage.feature:8
+&gt;&gt; karate-config.js failed
+&gt;&gt; js failed:
+&gt;&gt;&gt;&gt;
+01: function fn() {
+02:   var env = karate.env; // get system property &#39;karate.env&#39;
+03:   karate.log(&#39;karate.env system property was:&#39;, env);
+04:   if (!env) {
+05:     env = &#39;dev&#39;;
+06:   }
+07:   var config = {
+08: 	  apiUrl: &#39;https://conduit.productionready.io/api/&#39;
+09:   }
+10: 
+11:   if (env == &#39;dev&#39;) {
+12:     config.userEmail = &#39;hilarioleozinho@gmail.com&#39;
+13:     config.userPassword = &#39;88086123&#39;
+14:   }
+15:   if (env == &#39;qa&#39;) {
+16:     config.userEmail = &#39;karate2@test.com&#39;
+17:     config.userPassword = &#39;Karate456&#39;
+18:   }
+19: 
+20:   var accessToken = karate.callSingle(&#39;classpath:helpers/CreateToken.feature&#39;, config).authToken
+21:   karate.configure(&#39;headers&#39;, {Authorization: &#39;Token &#39; + accessToken})
+22: 
+23:   return config;
+24: }
+&lt;&lt;&lt;&lt;
+org.graalvm.polyglot.PolyglotException
+- com.intuit.karate.core.ScenarioBridge.callSingle(ScenarioBridge.java:246)
+- &lt;js&gt;.fn(Unnamed:20)
+
+js failed:
+&gt;&gt;&gt;&gt;
+01: function fn() {
+02:   var env = karate.env; // get system property &#39;karate.env&#39;
+03:   karate.log(&#39;karate.env system property was:&#39;, env);
+04:   if (!env) {
+05:     env = &#39;dev&#39;;
+06:   }
+07:   var config = {
+08: 	  apiUrl: &#39;https://conduit.productionready.io/api/&#39;
+09:   }
+10: 
+11:   if (env == &#39;dev&#39;) {
+12:     config.userEmail = &#39;hilarioleozinho@gmail.com&#39;
+13:     config.userPassword = &#39;88086123&#39;
+14:   }
+15:   if (env == &#39;qa&#39;) {
+16:     config.userEmail = &#39;karate2@test.com&#39;
+17:     config.userPassword = &#39;Karate456&#39;
+18:   }
+19: 
+20:   var accessToken = karate.callSingle(&#39;classpath:helpers/CreateToken.feature&#39;, config).authToken
+21:   karate.configure(&#39;headers&#39;, {Authorization: &#39;Token &#39; + accessToken})
+22: 
+23:   return config;
+24: }
+&lt;&lt;&lt;&lt;
+com.intuit.karate.KarateException: js failed:
+&gt;&gt;&gt;&gt;
+01: function fn() {
+02:   var env = karate.env; // get system property &#39;karate.env&#39;
+03:   karate.log(&#39;karate.env system property was:&#39;, env);
+04:   if (!env) {
+05:     env = &#39;dev&#39;;
+06:   }
+07:   var config = {
+08: 	  apiUrl: &#39;https://conduit.productionready.io/api/&#39;
+09:   }
+10: 
+11:   if (env == &#39;dev&#39;) {
+12:     config.userEmail = &#39;hilarioleozinho@gmail.com&#39;
+13:     config.userPassword = &#39;88086123&#39;
+14:   }
+15:   if (env == &#39;qa&#39;) {
+16:     config.userEmail = &#39;karate2@test.com&#39;
+17:     config.userPassword = &#39;Karate456&#39;
+18:   }
+19: 
+20:   var accessToken = karate.callSingle(&#39;classpath:helpers/CreateToken.feature&#39;, config).authToken
+21:   karate.configure(&#39;headers&#39;, {Authorization: &#39;Token &#39; + accessToken})
+22: 
+23:   return config;
+24: }
+&lt;&lt;&lt;&lt;
+org.graalvm.polyglot.PolyglotException
+- com.intuit.karate.core.ScenarioBridge.callSingle(ScenarioBridge.java:246)
+- &lt;js&gt;.fn(Unnamed:20)
+
+- com.intuit.karate.graal.JsEngine.fromJsEvalException(JsEngine.java:233)
+- com.intuit.karate.core.ScenarioEngine.executeJsValue(ScenarioEngine.java:1336)
+- com.intuit.karate.core.ScenarioEngine.executeFunction(ScenarioEngine.java:1319)
+- com.intuit.karate.core.ScenarioEngine.getOrEvalAsMap(ScenarioEngine.java:1308)
+- com.intuit.karate.core.ScenarioRuntime.evalConfigJs(ScenarioRuntime.java:318)
+- com.intuit.karate.core.ScenarioRuntime.beforeRun(ScenarioRuntime.java:398)
+- com.intuit.karate.core.ScenarioRuntime.run(ScenarioRuntime.java:430)
+
+src/test/java/conduitApp/feature/HomePage.feature:5
+src/test/java/conduitApp/feature/HomePage.feature:9
+</div>   
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.10">
+      <div class="step-ref failed">10</div>
+      
+      <div class="step-cell failed">
+        <span>When</span>&nbsp;<span>method Get</span>
+      </div>
+    </div>
+    <div class="time-cell failed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+  <div class="preformatted" data-parent="0.10">15:15:43.423 src/test/java/conduitApp/feature/HomePage.feature:10
+When method Get
+&gt;&gt; src/test/java/conduitApp/feature/HomePage.feature:8
+&gt;&gt; karate-config.js failed
+&gt;&gt; js failed:
+&gt;&gt;&gt;&gt;
+01: function fn() {
+02:   var env = karate.env; // get system property &#39;karate.env&#39;
+03:   karate.log(&#39;karate.env system property was:&#39;, env);
+04:   if (!env) {
+05:     env = &#39;dev&#39;;
+06:   }
+07:   var config = {
+08: 	  apiUrl: &#39;https://conduit.productionready.io/api/&#39;
+09:   }
+10: 
+11:   if (env == &#39;dev&#39;) {
+12:     config.userEmail = &#39;hilarioleozinho@gmail.com&#39;
+13:     config.userPassword = &#39;88086123&#39;
+14:   }
+15:   if (env == &#39;qa&#39;) {
+16:     config.userEmail = &#39;karate2@test.com&#39;
+17:     config.userPassword = &#39;Karate456&#39;
+18:   }
+19: 
+20:   var accessToken = karate.callSingle(&#39;classpath:helpers/CreateToken.feature&#39;, config).authToken
+21:   karate.configure(&#39;headers&#39;, {Authorization: &#39;Token &#39; + accessToken})
+22: 
+23:   return config;
+24: }
+&lt;&lt;&lt;&lt;
+org.graalvm.polyglot.PolyglotException
+- com.intuit.karate.core.ScenarioBridge.callSingle(ScenarioBridge.java:246)
+- &lt;js&gt;.fn(Unnamed:20)
+
+js failed:
+&gt;&gt;&gt;&gt;
+01: function fn() {
+02:   var env = karate.env; // get system property &#39;karate.env&#39;
+03:   karate.log(&#39;karate.env system property was:&#39;, env);
+04:   if (!env) {
+05:     env = &#39;dev&#39;;
+06:   }
+07:   var config = {
+08: 	  apiUrl: &#39;https://conduit.productionready.io/api/&#39;
+09:   }
+10: 
+11:   if (env == &#39;dev&#39;) {
+12:     config.userEmail = &#39;hilarioleozinho@gmail.com&#39;
+13:     config.userPassword = &#39;88086123&#39;
+14:   }
+15:   if (env == &#39;qa&#39;) {
+16:     config.userEmail = &#39;karate2@test.com&#39;
+17:     config.userPassword = &#39;Karate456&#39;
+18:   }
+19: 
+20:   var accessToken = karate.callSingle(&#39;classpath:helpers/CreateToken.feature&#39;, config).authToken
+21:   karate.configure(&#39;headers&#39;, {Authorization: &#39;Token &#39; + accessToken})
+22: 
+23:   return config;
+24: }
+&lt;&lt;&lt;&lt;
+com.intuit.karate.KarateException: js failed:
+&gt;&gt;&gt;&gt;
+01: function fn() {
+02:   var env = karate.env; // get system property &#39;karate.env&#39;
+03:   karate.log(&#39;karate.env system property was:&#39;, env);
+04:   if (!env) {
+05:     env = &#39;dev&#39;;
+06:   }
+07:   var config = {
+08: 	  apiUrl: &#39;https://conduit.productionready.io/api/&#39;
+09:   }
+10: 
+11:   if (env == &#39;dev&#39;) {
+12:     config.userEmail = &#39;hilarioleozinho@gmail.com&#39;
+13:     config.userPassword = &#39;88086123&#39;
+14:   }
+15:   if (env == &#39;qa&#39;) {
+16:     config.userEmail = &#39;karate2@test.com&#39;
+17:     config.userPassword = &#39;Karate456&#39;
+18:   }
+19: 
+20:   var accessToken = karate.callSingle(&#39;classpath:helpers/CreateToken.feature&#39;, config).authToken
+21:   karate.configure(&#39;headers&#39;, {Authorization: &#39;Token &#39; + accessToken})
+22: 
+23:   return config;
+24: }
+&lt;&lt;&lt;&lt;
+org.graalvm.polyglot.PolyglotException
+- com.intuit.karate.core.ScenarioBridge.callSingle(ScenarioBridge.java:246)
+- &lt;js&gt;.fn(Unnamed:20)
+
+- com.intuit.karate.graal.JsEngine.fromJsEvalException(JsEngine.java:233)
+- com.intuit.karate.core.ScenarioEngine.executeJsValue(ScenarioEngine.java:1336)
+- com.intuit.karate.core.ScenarioEngine.executeFunction(ScenarioEngine.java:1319)
+- com.intuit.karate.core.ScenarioEngine.getOrEvalAsMap(ScenarioEngine.java:1308)
+- com.intuit.karate.core.ScenarioRuntime.evalConfigJs(ScenarioRuntime.java:318)
+- com.intuit.karate.core.ScenarioRuntime.beforeRun(ScenarioRuntime.java:398)
+- com.intuit.karate.core.ScenarioRuntime.run(ScenarioRuntime.java:430)
+
+src/test/java/conduitApp/feature/HomePage.feature:5
+src/test/java/conduitApp/feature/HomePage.feature:9
+src/test/java/conduitApp/feature/HomePage.feature:10
+</div>   
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.11">
+      <div class="step-ref failed">11</div>
+      
+      <div class="step-cell failed">
+        <span>Then</span>&nbsp;<span>status 200</span>
+      </div>
+    </div>
+    <div class="time-cell failed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+  <div class="preformatted" data-parent="0.11">15:15:43.423 src/test/java/conduitApp/feature/HomePage.feature:11
+Then status 200
+&gt;&gt; src/test/java/conduitApp/feature/HomePage.feature:8
+&gt;&gt; karate-config.js failed
+&gt;&gt; js failed:
+&gt;&gt;&gt;&gt;
+01: function fn() {
+02:   var env = karate.env; // get system property &#39;karate.env&#39;
+03:   karate.log(&#39;karate.env system property was:&#39;, env);
+04:   if (!env) {
+05:     env = &#39;dev&#39;;
+06:   }
+07:   var config = {
+08: 	  apiUrl: &#39;https://conduit.productionready.io/api/&#39;
+09:   }
+10: 
+11:   if (env == &#39;dev&#39;) {
+12:     config.userEmail = &#39;hilarioleozinho@gmail.com&#39;
+13:     config.userPassword = &#39;88086123&#39;
+14:   }
+15:   if (env == &#39;qa&#39;) {
+16:     config.userEmail = &#39;karate2@test.com&#39;
+17:     config.userPassword = &#39;Karate456&#39;
+18:   }
+19: 
+20:   var accessToken = karate.callSingle(&#39;classpath:helpers/CreateToken.feature&#39;, config).authToken
+21:   karate.configure(&#39;headers&#39;, {Authorization: &#39;Token &#39; + accessToken})
+22: 
+23:   return config;
+24: }
+&lt;&lt;&lt;&lt;
+org.graalvm.polyglot.PolyglotException
+- com.intuit.karate.core.ScenarioBridge.callSingle(ScenarioBridge.java:246)
+- &lt;js&gt;.fn(Unnamed:20)
+
+js failed:
+&gt;&gt;&gt;&gt;
+01: function fn() {
+02:   var env = karate.env; // get system property &#39;karate.env&#39;
+03:   karate.log(&#39;karate.env system property was:&#39;, env);
+04:   if (!env) {
+05:     env = &#39;dev&#39;;
+06:   }
+07:   var config = {
+08: 	  apiUrl: &#39;https://conduit.productionready.io/api/&#39;
+09:   }
+10: 
+11:   if (env == &#39;dev&#39;) {
+12:     config.userEmail = &#39;hilarioleozinho@gmail.com&#39;
+13:     config.userPassword = &#39;88086123&#39;
+14:   }
+15:   if (env == &#39;qa&#39;) {
+16:     config.userEmail = &#39;karate2@test.com&#39;
+17:     config.userPassword = &#39;Karate456&#39;
+18:   }
+19: 
+20:   var accessToken = karate.callSingle(&#39;classpath:helpers/CreateToken.feature&#39;, config).authToken
+21:   karate.configure(&#39;headers&#39;, {Authorization: &#39;Token &#39; + accessToken})
+22: 
+23:   return config;
+24: }
+&lt;&lt;&lt;&lt;
+com.intuit.karate.KarateException: js failed:
+&gt;&gt;&gt;&gt;
+01: function fn() {
+02:   var env = karate.env; // get system property &#39;karate.env&#39;
+03:   karate.log(&#39;karate.env system property was:&#39;, env);
+04:   if (!env) {
+05:     env = &#39;dev&#39;;
+06:   }
+07:   var config = {
+08: 	  apiUrl: &#39;https://conduit.productionready.io/api/&#39;
+09:   }
+10: 
+11:   if (env == &#39;dev&#39;) {
+12:     config.userEmail = &#39;hilarioleozinho@gmail.com&#39;
+13:     config.userPassword = &#39;88086123&#39;
+14:   }
+15:   if (env == &#39;qa&#39;) {
+16:     config.userEmail = &#39;karate2@test.com&#39;
+17:     config.userPassword = &#39;Karate456&#39;
+18:   }
+19: 
+20:   var accessToken = karate.callSingle(&#39;classpath:helpers/CreateToken.feature&#39;, config).authToken
+21:   karate.configure(&#39;headers&#39;, {Authorization: &#39;Token &#39; + accessToken})
+22: 
+23:   return config;
+24: }
+&lt;&lt;&lt;&lt;
+org.graalvm.polyglot.PolyglotException
+- com.intuit.karate.core.ScenarioBridge.callSingle(ScenarioBridge.java:246)
+- &lt;js&gt;.fn(Unnamed:20)
+
+- com.intuit.karate.graal.JsEngine.fromJsEvalException(JsEngine.java:233)
+- com.intuit.karate.core.ScenarioEngine.executeJsValue(ScenarioEngine.java:1336)
+- com.intuit.karate.core.ScenarioEngine.executeFunction(ScenarioEngine.java:1319)
+- com.intuit.karate.core.ScenarioEngine.getOrEvalAsMap(ScenarioEngine.java:1308)
+- com.intuit.karate.core.ScenarioRuntime.evalConfigJs(ScenarioRuntime.java:318)
+- com.intuit.karate.core.ScenarioRuntime.beforeRun(ScenarioRuntime.java:398)
+- com.intuit.karate.core.ScenarioRuntime.run(ScenarioRuntime.java:430)
+
+src/test/java/conduitApp/feature/HomePage.feature:5
+src/test/java/conduitApp/feature/HomePage.feature:9
+src/test/java/conduitApp/feature/HomePage.feature:10
+src/test/java/conduitApp/feature/HomePage.feature:11
+</div>   
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.12">
+      <div class="step-ref failed">12</div>
+      
+      <div class="step-cell failed">
+        <span>And</span>&nbsp;<span>match response.tags == &quot;#array&quot;</span>
+      </div>
+    </div>
+    <div class="time-cell failed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+  <div class="preformatted" data-parent="0.12">15:15:43.425 src/test/java/conduitApp/feature/HomePage.feature:12
+And match response.tags == &quot;#array&quot;
+&gt;&gt; src/test/java/conduitApp/feature/HomePage.feature:8
+&gt;&gt; karate-config.js failed
+&gt;&gt; js failed:
+&gt;&gt;&gt;&gt;
+01: function fn() {
+02:   var env = karate.env; // get system property &#39;karate.env&#39;
+03:   karate.log(&#39;karate.env system property was:&#39;, env);
+04:   if (!env) {
+05:     env = &#39;dev&#39;;
+06:   }
+07:   var config = {
+08: 	  apiUrl: &#39;https://conduit.productionready.io/api/&#39;
+09:   }
+10: 
+11:   if (env == &#39;dev&#39;) {
+12:     config.userEmail = &#39;hilarioleozinho@gmail.com&#39;
+13:     config.userPassword = &#39;88086123&#39;
+14:   }
+15:   if (env == &#39;qa&#39;) {
+16:     config.userEmail = &#39;karate2@test.com&#39;
+17:     config.userPassword = &#39;Karate456&#39;
+18:   }
+19: 
+20:   var accessToken = karate.callSingle(&#39;classpath:helpers/CreateToken.feature&#39;, config).authToken
+21:   karate.configure(&#39;headers&#39;, {Authorization: &#39;Token &#39; + accessToken})
+22: 
+23:   return config;
+24: }
+&lt;&lt;&lt;&lt;
+org.graalvm.polyglot.PolyglotException
+- com.intuit.karate.core.ScenarioBridge.callSingle(ScenarioBridge.java:246)
+- &lt;js&gt;.fn(Unnamed:20)
+
+js failed:
+&gt;&gt;&gt;&gt;
+01: function fn() {
+02:   var env = karate.env; // get system property &#39;karate.env&#39;
+03:   karate.log(&#39;karate.env system property was:&#39;, env);
+04:   if (!env) {
+05:     env = &#39;dev&#39;;
+06:   }
+07:   var config = {
+08: 	  apiUrl: &#39;https://conduit.productionready.io/api/&#39;
+09:   }
+10: 
+11:   if (env == &#39;dev&#39;) {
+12:     config.userEmail = &#39;hilarioleozinho@gmail.com&#39;
+13:     config.userPassword = &#39;88086123&#39;
+14:   }
+15:   if (env == &#39;qa&#39;) {
+16:     config.userEmail = &#39;karate2@test.com&#39;
+17:     config.userPassword = &#39;Karate456&#39;
+18:   }
+19: 
+20:   var accessToken = karate.callSingle(&#39;classpath:helpers/CreateToken.feature&#39;, config).authToken
+21:   karate.configure(&#39;headers&#39;, {Authorization: &#39;Token &#39; + accessToken})
+22: 
+23:   return config;
+24: }
+&lt;&lt;&lt;&lt;
+com.intuit.karate.KarateException: js failed:
+&gt;&gt;&gt;&gt;
+01: function fn() {
+02:   var env = karate.env; // get system property &#39;karate.env&#39;
+03:   karate.log(&#39;karate.env system property was:&#39;, env);
+04:   if (!env) {
+05:     env = &#39;dev&#39;;
+06:   }
+07:   var config = {
+08: 	  apiUrl: &#39;https://conduit.productionready.io/api/&#39;
+09:   }
+10: 
+11:   if (env == &#39;dev&#39;) {
+12:     config.userEmail = &#39;hilarioleozinho@gmail.com&#39;
+13:     config.userPassword = &#39;88086123&#39;
+14:   }
+15:   if (env == &#39;qa&#39;) {
+16:     config.userEmail = &#39;karate2@test.com&#39;
+17:     config.userPassword = &#39;Karate456&#39;
+18:   }
+19: 
+20:   var accessToken = karate.callSingle(&#39;classpath:helpers/CreateToken.feature&#39;, config).authToken
+21:   karate.configure(&#39;headers&#39;, {Authorization: &#39;Token &#39; + accessToken})
+22: 
+23:   return config;
+24: }
+&lt;&lt;&lt;&lt;
+org.graalvm.polyglot.PolyglotException
+- com.intuit.karate.core.ScenarioBridge.callSingle(ScenarioBridge.java:246)
+- &lt;js&gt;.fn(Unnamed:20)
+
+- com.intuit.karate.graal.JsEngine.fromJsEvalException(JsEngine.java:233)
+- com.intuit.karate.core.ScenarioEngine.executeJsValue(ScenarioEngine.java:1336)
+- com.intuit.karate.core.ScenarioEngine.executeFunction(ScenarioEngine.java:1319)
+- com.intuit.karate.core.ScenarioEngine.getOrEvalAsMap(ScenarioEngine.java:1308)
+- com.intuit.karate.core.ScenarioRuntime.evalConfigJs(ScenarioRuntime.java:318)
+- com.intuit.karate.core.ScenarioRuntime.beforeRun(ScenarioRuntime.java:398)
+- com.intuit.karate.core.ScenarioRuntime.run(ScenarioRuntime.java:430)
+
+src/test/java/conduitApp/feature/HomePage.feature:5
+src/test/java/conduitApp/feature/HomePage.feature:9
+src/test/java/conduitApp/feature/HomePage.feature:10
+src/test/java/conduitApp/feature/HomePage.feature:11
+src/test/java/conduitApp/feature/HomePage.feature:12
+</div>   
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.13">
+      <div class="step-ref failed">13</div>
+      
+      <div class="step-cell failed">
+        <span>And</span>&nbsp;<span>match each response.tags == &quot;#string&quot;</span>
+      </div>
+    </div>
+    <div class="time-cell failed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+  <div class="preformatted" data-parent="0.13">15:15:43.425 src/test/java/conduitApp/feature/HomePage.feature:13
+And match each response.tags == &quot;#string&quot;
+&gt;&gt; src/test/java/conduitApp/feature/HomePage.feature:8
+&gt;&gt; karate-config.js failed
+&gt;&gt; js failed:
+&gt;&gt;&gt;&gt;
+01: function fn() {
+02:   var env = karate.env; // get system property &#39;karate.env&#39;
+03:   karate.log(&#39;karate.env system property was:&#39;, env);
+04:   if (!env) {
+05:     env = &#39;dev&#39;;
+06:   }
+07:   var config = {
+08: 	  apiUrl: &#39;https://conduit.productionready.io/api/&#39;
+09:   }
+10: 
+11:   if (env == &#39;dev&#39;) {
+12:     config.userEmail = &#39;hilarioleozinho@gmail.com&#39;
+13:     config.userPassword = &#39;88086123&#39;
+14:   }
+15:   if (env == &#39;qa&#39;) {
+16:     config.userEmail = &#39;karate2@test.com&#39;
+17:     config.userPassword = &#39;Karate456&#39;
+18:   }
+19: 
+20:   var accessToken = karate.callSingle(&#39;classpath:helpers/CreateToken.feature&#39;, config).authToken
+21:   karate.configure(&#39;headers&#39;, {Authorization: &#39;Token &#39; + accessToken})
+22: 
+23:   return config;
+24: }
+&lt;&lt;&lt;&lt;
+org.graalvm.polyglot.PolyglotException
+- com.intuit.karate.core.ScenarioBridge.callSingle(ScenarioBridge.java:246)
+- &lt;js&gt;.fn(Unnamed:20)
+
+js failed:
+&gt;&gt;&gt;&gt;
+01: function fn() {
+02:   var env = karate.env; // get system property &#39;karate.env&#39;
+03:   karate.log(&#39;karate.env system property was:&#39;, env);
+04:   if (!env) {
+05:     env = &#39;dev&#39;;
+06:   }
+07:   var config = {
+08: 	  apiUrl: &#39;https://conduit.productionready.io/api/&#39;
+09:   }
+10: 
+11:   if (env == &#39;dev&#39;) {
+12:     config.userEmail = &#39;hilarioleozinho@gmail.com&#39;
+13:     config.userPassword = &#39;88086123&#39;
+14:   }
+15:   if (env == &#39;qa&#39;) {
+16:     config.userEmail = &#39;karate2@test.com&#39;
+17:     config.userPassword = &#39;Karate456&#39;
+18:   }
+19: 
+20:   var accessToken = karate.callSingle(&#39;classpath:helpers/CreateToken.feature&#39;, config).authToken
+21:   karate.configure(&#39;headers&#39;, {Authorization: &#39;Token &#39; + accessToken})
+22: 
+23:   return config;
+24: }
+&lt;&lt;&lt;&lt;
+com.intuit.karate.KarateException: js failed:
+&gt;&gt;&gt;&gt;
+01: function fn() {
+02:   var env = karate.env; // get system property &#39;karate.env&#39;
+03:   karate.log(&#39;karate.env system property was:&#39;, env);
+04:   if (!env) {
+05:     env = &#39;dev&#39;;
+06:   }
+07:   var config = {
+08: 	  apiUrl: &#39;https://conduit.productionready.io/api/&#39;
+09:   }
+10: 
+11:   if (env == &#39;dev&#39;) {
+12:     config.userEmail = &#39;hilarioleozinho@gmail.com&#39;
+13:     config.userPassword = &#39;88086123&#39;
+14:   }
+15:   if (env == &#39;qa&#39;) {
+16:     config.userEmail = &#39;karate2@test.com&#39;
+17:     config.userPassword = &#39;Karate456&#39;
+18:   }
+19: 
+20:   var accessToken = karate.callSingle(&#39;classpath:helpers/CreateToken.feature&#39;, config).authToken
+21:   karate.configure(&#39;headers&#39;, {Authorization: &#39;Token &#39; + accessToken})
+22: 
+23:   return config;
+24: }
+&lt;&lt;&lt;&lt;
+org.graalvm.polyglot.PolyglotException
+- com.intuit.karate.core.ScenarioBridge.callSingle(ScenarioBridge.java:246)
+- &lt;js&gt;.fn(Unnamed:20)
+
+- com.intuit.karate.graal.JsEngine.fromJsEvalException(JsEngine.java:233)
+- com.intuit.karate.core.ScenarioEngine.executeJsValue(ScenarioEngine.java:1336)
+- com.intuit.karate.core.ScenarioEngine.executeFunction(ScenarioEngine.java:1319)
+- com.intuit.karate.core.ScenarioEngine.getOrEvalAsMap(ScenarioEngine.java:1308)
+- com.intuit.karate.core.ScenarioRuntime.evalConfigJs(ScenarioRuntime.java:318)
+- com.intuit.karate.core.ScenarioRuntime.beforeRun(ScenarioRuntime.java:398)
+- com.intuit.karate.core.ScenarioRuntime.run(ScenarioRuntime.java:430)
+
+src/test/java/conduitApp/feature/HomePage.feature:5
+src/test/java/conduitApp/feature/HomePage.feature:9
+src/test/java/conduitApp/feature/HomePage.feature:10
+src/test/java/conduitApp/feature/HomePage.feature:11
+src/test/java/conduitApp/feature/HomePage.feature:12
+src/test/java/conduitApp/feature/HomePage.feature:13
+</div>   
+
+  
+
+</div>
+</div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
+
