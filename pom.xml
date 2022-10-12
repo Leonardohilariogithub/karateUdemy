@@ -3,24 +3,51 @@
     <modelVersion>4.0.0</modelVersion>
  
     <groupId>com.mycompany</groupId>
-    <artifactId>karateUdemy</artifactId>
+    <artifactId>KarateUdemy</artifactId>
     <version>1.0-SNAPSHOT</version>
     <packaging>jar</packaging>
  
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-        <java.version>11</java.version>
-        <maven.compiler.version>3.8.1</maven.compiler.version>
-        <maven.surefire.version>2.22.2</maven.surefire.version>        
-        <karate.version>1.2.0</karate.version>
+        <java.version>1.8</java.version>
+        <maven.compiler.version>3.6.0</maven.compiler.version>
+        <karate.version>0.9.5</karate.version>
+        <gatling.plugin.version>3.0.5</gatling.plugin.version>
     </properties>    
 
-    <dependencies>         
+    <dependencies>
+        <dependency>
+            <groupId>com.intuit.karate</groupId>
+            <artifactId>karate-apache</artifactId>
+            <version>${karate.version}</version>
+            <scope>test</scope>
+        </dependency>            
         <dependency>
             <groupId>com.intuit.karate</groupId>
             <artifactId>karate-junit5</artifactId>
             <version>${karate.version}</version>
             <scope>test</scope>
+        </dependency>
+        <dependency>
+            <groupId>com.github.javafaker</groupId>
+            <artifactId>javafaker</artifactId>
+            <version>1.0.2</version>
+        </dependency>
+        <dependency>
+            <groupId>net.masterthought</groupId>
+            <artifactId>cucumber-reporting</artifactId>
+            <version>5.3.0</version>
+        </dependency>
+        <dependency>
+            <groupId>com.intuit.karate</groupId>
+            <artifactId>karate-gatling</artifactId>
+            <version>${karate.version}</version>
+            <scope>test</scope>
+        </dependency>
+        <dependency>
+            <groupId>com.microsoft.sqlserver</groupId>
+            <artifactId>mssql-jdbc</artifactId>
+            <version>8.4.1.jre11</version>
         </dependency>		
     </dependencies>
 
@@ -48,11 +75,22 @@
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-surefire-plugin</artifactId>
-                <version>${maven.surefire.version}</version>
+                <version>2.22.2</version>
                 <configuration>
-                    <argLine>-Dfile.encoding=UTF-8</argLine>
+                    <systemProperties>
+                        <karate.options>--tags ~@ignore</karate.options>
+                    </systemProperties>            
                 </configuration>
-            </plugin>          
+            </plugin>
+            <plugin>
+                <groupId>io.gatling</groupId>
+                <artifactId>gatling-maven-plugin</artifactId>
+                <version>${gatling.plugin.version}</version>
+                <configuration>
+                    <simulationsFolder>src/test/java/conduitApp/performance</simulationsFolder>
+                    <configFolder>src/test/java/conduitApp/performance/data</configFolder>
+                </configuration>             
+            </plugin>            
         </plugins>        
     </build>       
     

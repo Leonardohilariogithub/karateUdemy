@@ -1,0 +1,21 @@
+<testsuite failures="0"
+           name="src/test/java/conduitApp/feature/Articles.feature"
+           skipped="0"
+           tests="1"
+           time="0.921771">
+   <testcase classname="src.test.java.conduitApp.feature.Articles"
+             name="Create a new article"
+             time="0.921771">
+      <system-out>* url apiUrl .............................................................. passed
+* def articleRequestBody = read('classpath:conduitApp/json/newArticleRequest.json') . passed
+* def dataGenerator = Java.type('helpers.DataGenerator') .................. passed
+* set articleRequestBody.article.title = dataGenerator.getRandomArticleValues().title . passed
+* set articleRequestBody.article.description = dataGenerator.getRandomArticleValues().description . passed
+* set articleRequestBody.article.body = dataGenerator.getRandomArticleValues().body . passed
+Given path 'articles' ..................................................... passed
+And request articleRequestBody ............................................ passed
+When method Post .......................................................... passed
+Then status 200 ........................................................... passed
+And match response.article.title == articleRequestBody.article.title ...... passed</system-out>
+   </testcase>
+</testsuite>
